@@ -1,0 +1,499 @@
+{
+  "common": {
+    "Header": {
+      "logo": "Vivantro",
+      "logoImage": "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+      "menu": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "About Us",
+          "href": "#"
+        },
+        {
+          "label": "Services",
+          "href": "#",
+          "subItems": [
+            {
+              "label": "Wedding Planning",
+              "href": "#",
+              "icon": "Users"
+            },
+            {
+              "label": "Corporate Events",
+              "href": "#",
+              "icon": "Calendar"
+            },
+            {
+              "label": "Birthday Celebrations",
+              "href": "#",
+              "icon": "Cake"
+            },
+            {
+              "label": "Live Concerts",
+              "href": "#",
+              "icon": "Music"
+            },
+            {
+              "label": "Destination Events",
+              "href": "#",
+              "icon": "MapPin"
+            }
+          ],
+          "icon": "ClipboardList"
+        },
+        {
+          "label": "Events",
+          "href": "#"
+        },
+        {
+          "label": "Gallery",
+          "href": "#"
+        },
+        {
+          "label": "Contact Us",
+          "href": "#"
+        }
+      ],
+      "button": {
+        "label": "Get A Quote",
+        "href": "#"
+      }
+    },
+    "Footer": {
+      "logo": "Vivantro",
+      "description": "Your trusted partner for creating unforgettable events, from corporate conferences to luxury weddings.",
+      "quickLinks": [
+        {
+          "label": "Live Shows & Concerts",
+          "href": "#"
+        },
+        {
+          "label": "Weddings & Engagements",
+          "href": "#"
+        },
+        {
+          "label": "Nights & Award Ceremonies",
+          "href": "#"
+        },
+        {
+          "label": "Birthday Parties",
+          "href": "#"
+        },
+        {
+          "label": "Corporate Events",
+          "href": "#"
+        }
+      ],
+      "contact": {
+        "phone": "+1 (555) 123-4567",
+        "email": "info@vivantro.com",
+        "address": "123 Event Street, Suite 400, New York, NY 10001"
+      },
+      "newsletter": {
+        "title": "Our Newsletter",
+        "description": "Subscribe for the latest updates and event planning tips."
+      },
+      "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow",
+      "logoImage": "/logo/logo.png",
+      "socialLinks": [
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com"
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com"
+        }
+      ],
+      "labels": {
+        "followUs": "Follow Us",
+        "ourEvents": "Our Events",
+        "contactUs": "Contact Us",
+        "callUs": "Call Us",
+        "mailUs": "Mail Us",
+        "officeLocation": "Our Office Location",
+        "newsletterPlaceholder": "Your Email Address",
+        "subscribeBtn": "Subscribe Now",
+        "newsletterDisclaimer": "No spam, unsubscribe anytime."
+      }
+    }
+  },
+  "categories": {
+    "Event": {
+      "templateComponents": {
+        "template-2": {
+          "pages": {
+            "home": {
+              "components": [
+                {
+                  "key": "Hero",
+                  "component": "EventHero2"
+                },
+                {
+                  "key": "About",
+                  "component": "EventAbout2"
+                },
+                {
+                  "key": "Services",
+                  "component": "EventServices2"
+                },
+                {
+                  "key": "WhyChooseUs",
+                  "component": "EventWhyChooseUs2"
+                },
+                {
+                  "key": "Stats",
+                  "component": "EventStats2"
+                },
+                {
+                  "key": "Events",
+                  "component": "EventEvents2"
+                },
+                {
+                  "key": "Team",
+                  "component": "EventTeam2"
+                },
+                {
+                  "key": "Testimonials",
+                  "component": "EventTestimonials2"
+                },
+                {
+                  "key": "Blog",
+                  "component": "EventBlog2"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "sections": {
+        "Hero": {
+          "variants": {
+            "EventHero2": {
+              "images": [
+                "/hero-slider/1.jpg",
+                "/hero-slider/2.jpg",
+                "/hero-slider/3.jpg"
+              ]
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "EventAbout2": {
+              "subtitle": "ABOUT US",
+              "title": "Turning Moments Into Lasting Memories",
+              "description": "At Viventro, we don't just plan events, we create unforgettable experiences that stay with you forever.",
+              "buttonText": "More About Us",
+              "features": [
+                "Expert Event Planning Solutions",
+                "Creative Event Design Services",
+                "Seamless Event Execution Management"
+              ],
+              "images": [
+                "https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              ],
+              "planner": {
+                "name": "Sk Samiul",
+                "role": "Event Planner",
+                "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+              }
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "EventServices2": {
+              "subtitle": "Our Event Services",
+              "title": "Explore Our Full Range of Event Solutions",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+              "buttonText": "Explore Our Services",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Wedding Planning & Coordination",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "icon": "Heart",
+                  "image": "/eventservices/1.webp"
+                },
+                {
+                  "id": 2,
+                  "title": "Birthday & Private Parties",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "icon": "Cake",
+                  "image": "/eventservices/2.webp"
+                },
+                {
+                  "id": 3,
+                  "title": "Corporate Events & Conferences",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "icon": "Briefcase",
+                  "image": "/eventservices/3.webp"
+                },
+                {
+                  "id": 4,
+                  "title": "Engagements & Anniversaries",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "icon": "HeartHandshake",
+                  "image": "/eventservices/4.webp"
+                },
+                {
+                  "id": 5,
+                  "title": "Destination Weddings",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "icon": "Plane",
+                  "image": "/eventservices/5.webp"
+                },
+                {
+                  "id": 6,
+                  "title": "Entertainment & Production",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "icon": "Music",
+                  "image": "/eventservices/6.webp"
+                }
+              ]
+            }
+          }
+        },
+        "WhyChooseUs": {
+          "variants": {
+            "EventWhyChooseUs2": {
+              "subtitle": "WHAT WE DO OFFER",
+              "title": "Everything You Need For a Perfect Event",
+              "description": "From planning to execution, we take care of every detail to deliver seamless, stylish and unforgettable celebrations.",
+              "image": "/img/whychooses.png",
+              "features": [
+                {
+                  "title": "Event Planning & Coordination",
+                  "description": "We plan every detail with precision to bring your vision to life and ensure a stress-free experience.",
+                  "icon": "Calendar"
+                },
+                {
+                  "title": "Venue Selection & Decoration",
+                  "description": "We help you find the perfect venue and design it beautifully to match your theme and style.",
+                  "icon": "MapPin"
+                },
+                {
+                  "title": "Catering & Hospitality",
+                  "description": "Delicious menus and exceptional service for a delightful experience your guests will remember.",
+                  "icon": "Utensils"
+                },
+                {
+                  "title": "Entertainment & Production",
+                  "description": "From DJs to lighting and special effects, we create the perfect ambience and energy for your event.",
+                  "icon": "Music"
+                }
+              ]
+            }
+          }
+        },
+        "Stats": {
+          "variants": {
+            "EventStats2": {
+              "items": [
+                {
+                  "value": "70+",
+                  "label": "Events Delivered",
+                  "icon": "Calendar"
+                },
+                {
+                  "value": "20+",
+                  "label": "Years of Experience",
+                  "icon": "Award"
+                },
+                {
+                  "value": "10K+",
+                  "label": "Happy Clients",
+                  "icon": "Users"
+                },
+                {
+                  "value": "50+",
+                  "label": "Trusted Partners",
+                  "icon": "Handshake"
+                }
+              ]
+            }
+          }
+        },
+        "Events": {
+          "variants": {
+            "EventEvents2": {
+              "subtitle": "EVENTS",
+              "title": "Discover Memorable And Exciting Events Near You",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+              "buttonText": "Event Details",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Celebrate Your Dream Wedding",
+                  "category": "WEDDING",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nUt elit tellus, luctus nec ullamcorper mattis.",
+                  "buttonText": "Buy Ticket",
+                  "image": "/event/1.webp",
+                  "date": "10",
+                  "month": "JULY",
+                  "day": "SATURDAY",
+                  "location": "Miami Beach,\nFlorida",
+                  "time": "10.00am - 02.00pm"
+                },
+                {
+                  "id": 2,
+                  "title": "Make Your Birthday Truly Unforgettable",
+                  "category": "BIRTHDAY",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nUt elit tellus, luctus nec ullamcorper mattis.",
+                  "buttonText": "Buy Ticket",
+                  "image": "/event/2.webp",
+                  "date": "05",
+                  "month": "AUGUST",
+                  "day": "SATURDAY",
+                  "location": "Miami Beach,\nFlorida",
+                  "time": "10.00am - 02.00pm"
+                },
+                {
+                  "id": 3,
+                  "title": "Live Concert – An Evening of Music",
+                  "category": "LIVE CONCERT",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nUt elit tellus, luctus nec ullamcorper mattis.",
+                  "buttonText": "Buy Ticket",
+                  "image": "/event/3.webp",
+                  "date": "20",
+                  "month": "SEPTEMBER",
+                  "day": "FRIDAY",
+                  "location": "Miami Beach,\nFlorida",
+                  "time": "10.00am - 02.00pm"
+                }
+              ]
+            }
+          }
+        },
+        "Team": {
+          "variants": {
+            "EventTeam2": {
+              "subtitle": "OUR TEAM",
+              "title": "Meet The Team Behind Your Perfect Event",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+              "buttonText": "View More",
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Rohit Sharma",
+                  "role": "Founder & CEO",
+                  "image": "/team/1.png"
+                },
+                {
+                  "id": 2,
+                  "name": "Priya Sharma",
+                  "role": "Event Manager",
+                  "image": "/team/2.png"
+                },
+                {
+                  "id": 3,
+                  "name": "Arjun Verma",
+                  "role": "Creative Director",
+                  "image": "/team/3.png"
+                },
+                {
+                  "id": 4,
+                  "name": "Neha Gupta",
+                  "role": "Operations Manager",
+                  "image": "/team/4.png"
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "EventTestimonials2": {
+              "subtitle": "TESTIMONIALS",
+              "title": "Hear From Those We've Celebrated.",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+              "image": "/cover.png",
+              "items": [
+                {
+                  "id": 1,
+                  "name": "David Wilson",
+                  "role": "CEO, TechCorp",
+                  "quote": "The team at Vivantro absolutely crushed our annual conference. The attention to detail and flawless execution made it our best event yet. Highly recommended for corporate events.",
+                  "image": "/tesimonails/cleint/David.webp"
+                },
+                {
+                  "id": 2,
+                  "name": "Sophia Evans",
+                  "role": "Bride",
+                  "quote": "They planned our wedding down to the last detail. It was beautiful, stress-free, and exactly what we dreamed of. Thank you for making our special day perfect!",
+                  "image": "/tesimonails/cleint/sophia.webp"
+                },
+                {
+                  "id": 3,
+                  "name": "Michael Chang",
+                  "role": "Event Director",
+                  "quote": "An absolute pleasure to work with. Their team handled everything from lighting to guest management flawlessly, making our gala a huge success.",
+                  "image": "/tesimonails/cleint/michael.webp"
+                },
+                {
+                  "id": 4,
+                  "name": "Emma Thompson",
+                  "role": "Marketing Manager",
+                  "quote": "They transformed our brand launch into an unforgettable experience. The creativity and professionalism were unmatched. Best agency ever!",
+                  "image": "/tesimonails/cleint/emma.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Blog": {
+          "variants": {
+            "EventBlog2": {
+              "subtitle": "OUR BLOG",
+              "title": "Explore The Latest Event Tips, Trends & Success Stories",
+              "description": "Stay inspired with expert tips, trending ideas and real event stories that create impact.",
+              "buttonText": "View More",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Event Planning Checklist: Your Step-by-Step Guide",
+                  "description": "A complete checklist to help you plan, organize and execute flawless events without missing any detail.",
+                  "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                  "date": "22 May 2024",
+                  "author": "6 min read",
+                  "category": "PLANNING"
+                },
+                {
+                  "id": 2,
+                  "title": "Top Wedding Decor Trends For 2024",
+                  "description": "From floral fantasy to minimal elegance, explore the top decor trends making weddings unforgettable.",
+                  "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                  "date": "18 May 2024",
+                  "author": "5 min read",
+                  "category": "DECOR & THEMES"
+                },
+                {
+                  "id": 3,
+                  "title": "How To Make Your Corporate Event Truly Impactful",
+                  "description": "Proven strategies to engage your audience and create corporate events that leave a lasting impact.",
+                  "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                  "date": "12 May 2024",
+                  "author": "7 min read",
+                  "category": "EVENT SUCCESS"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
