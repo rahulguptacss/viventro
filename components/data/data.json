@@ -10,7 +10,7 @@
         },
         {
           "label": "About Us",
-          "href": "#"
+          "href": "/about-us"
         },
         {
           "label": "Services",
@@ -171,6 +171,26 @@
                 {
                   "key": "Blog",
                   "component": "EventBlog2"
+                }
+              ]
+            },
+            "about-us": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBanner2"
+                },
+                {
+                  "key": "About",
+                  "component": "EventAbout2"
+                },
+                {
+                  "key": "MissionVision",
+                  "component": "EventMissionVision2"
+                },
+                {
+                  "key": "Services",
+                  "component": "EventServices2"
                 }
               ]
             }
@@ -490,6 +510,79 @@
                   "category": "EVENT SUCCESS"
                 }
               ]
+            }
+          }
+        },
+        "PageBanner": {
+          "variants": {
+            "EventPageBanner2": {
+              "title": "About Us",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "About",
+                  "href": "/about-us"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            }
+          }
+        },
+        "MissionVision": {
+          "variants": {
+            "EventMissionVision2": {
+              "subtitle": "OUR PURPOSE",
+              "title": "Our Mission & Vision",
+              "description": "We are driven by a clear purpose and a future-focused vision to create extraordinary events that leave a lasting impact.",
+              "mission": {
+                "title": "Our Mission",
+                "description": "To deliver exceptional event experiences through creativity, precision and passion. We focus on understanding your vision and turning it into seamless celebrations that leave lasting memories.",
+                "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                "features": [
+                  {
+                    "title": "Creative Excellence",
+                    "description": "Unique ideas that create magical moments."
+                  },
+                  {
+                    "title": "Client-Centric Approach",
+                    "description": "Your vision is our priority, always."
+                  },
+                  {
+                    "title": "Seamless Execution",
+                    "description": "Flawless planning and impeccable execution."
+                  },
+                  {
+                    "title": "Passion For Perfection",
+                    "description": "We go the extra mile to make it perfect."
+                  }
+                ]
+              },
+              "vision": {
+                "title": "Our Vision",
+                "description": "To be the globally recognized leader in event management, setting new standards for innovation, creativity, and unforgettable event experiences.",
+                "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                "features": [
+                  {
+                    "title": "Global Reach",
+                    "description": "Creating impact on an international scale."
+                  },
+                  {
+                    "title": "Trendsetters",
+                    "description": "Pioneering new trends in the industry."
+                  },
+                  {
+                    "title": "Sustainable Events",
+                    "description": "Focusing on eco-friendly celebrations."
+                  },
+                  {
+                    "title": "Lasting Legacy",
+                    "description": "Events that will be remembered forever."
+                  }
+                ]
+              }
             }
           }
         }

@@ -19,6 +19,33 @@ export interface HeroData {
   images: string[];
 }
 
+export interface PageBannerData {
+  title: string;
+  breadcrumbs: { label: string; href: string }[];
+  backgroundImage: string;
+}
+
+export interface MissionVisionFeature {
+  title: string;
+  description: string;
+}
+
+export interface MissionVisionItem {
+  title: string;
+  description: string;
+  image: string;
+  features: MissionVisionFeature[];
+}
+
+export interface MissionVisionData {
+  subtitle: string;
+  title: string;
+  description: string;
+  mission: MissionVisionItem;
+  vision: MissionVisionItem;
+}
+
+
 export interface AboutData {
   subtitle: string;
   title: string;
@@ -184,6 +211,9 @@ export interface EventTemplateData {
         "template-2": {
           pages: {
             home: {
+              components: PageComponent[];
+            };
+            "about-us"?: {
               components: PageComponent[];
             };
           };
