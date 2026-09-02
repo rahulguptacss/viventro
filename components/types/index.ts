@@ -116,6 +116,17 @@ export interface TeamMember {
   name: string;
   role: string;
   image: string;
+  email?: string;
+  phone?: string;
+  linkedin?: string;
+  bio?: string;
+  skills?: { name: string; percentage: number }[];
+  experience?: {
+    yearRange: string;
+    title: string;
+    description?: string;
+    achievements?: string[];
+  }[];
 }
 
 export interface TeamData {
@@ -216,6 +227,9 @@ export interface EventTemplateData {
             "about-us"?: {
               components: PageComponent[];
             };
+            [key: string]: {
+              components: PageComponent[];
+            } | undefined;
           };
         };
       };

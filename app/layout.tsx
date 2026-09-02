@@ -32,7 +32,7 @@ export default function RootLayout({
   const sections = fullData.categories.Event.sections;
 
   Object.entries(pages).forEach(([pageKey, pageData]) => {
-    const bannerComp = pageData.components?.find(c => c.key === "PageBanner");
+    const bannerComp = pageData?.components?.find(c => c.key === "PageBanner");
     if (bannerComp && sections.PageBanner) {
       banners[pageKey] = sections.PageBanner.variants[bannerComp.component];
     }

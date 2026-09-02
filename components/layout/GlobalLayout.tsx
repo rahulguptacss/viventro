@@ -16,11 +16,27 @@ interface GlobalLayoutProps {
 export default function GlobalLayout({ children, headerData, footerData, banners }: GlobalLayoutProps) {
   const pathname = usePathname();
   
-  // Clean up pathname (e.g. /About-us -> About-us)
   const currentRoute = pathname === "/" ? "home" : pathname.replace(/^\//, "");
+  const baseRoute = currentRoute.split('/')[0];
   
   const isHome = currentRoute === "home";
-  const currentBanner = banners[currentRoute];
+  
+  let currentBanner = banners[currentRoute];
+  if (!currentBanner && baseRoute) {
+    currentBanner = banners[baseRoute];
+    
+    // Override banner details for specific dynamic routes
+    if (baseRoute === 'our-team' && currentRoute !== 'our-team') {
+      currentBanner = {
+        ...currentBanner,
+        title: "Team Detail",
+        breadcrumbs: [
+          { label: "Home", href: "/" },
+          { label: "Team Detail", href: "#" }
+        ]
+      };
+    }
+  }
 
   return (
     <div className="relative min-h-screen selection:bg-[#D4AF37] selection:text-black font-sans flex flex-col">

@@ -10,38 +10,34 @@
         },
         {
           "label": "About Us",
-          "href": "/about-us"
-        },
-        {
-          "label": "Services",
           "href": "#",
           "subItems": [
             {
-              "label": "Wedding Planning",
-              "href": "#",
+              "label": "About Us",
+              "href": "/about-us",
               "icon": "Users"
             },
             {
-              "label": "Corporate Events",
-              "href": "#",
-              "icon": "Calendar"
+              "label": "Our Mission",
+              "href": "/our-mission",
+              "icon": "Target"
             },
             {
-              "label": "Birthday Celebrations",
-              "href": "#",
-              "icon": "Cake"
+              "label": "Our Vision",
+              "href": "/our-vision",
+              "icon": "Eye"
             },
             {
-              "label": "Live Concerts",
-              "href": "#",
-              "icon": "Music"
-            },
-            {
-              "label": "Destination Events",
-              "href": "#",
-              "icon": "MapPin"
+              "label": "Why Choose Us",
+              "href": "/why-choose-us",
+              "icon": "Star"
             }
           ],
+          "icon": "ClipboardList"
+        },
+        {
+          "label": "Services",
+          "href": "/services",
           "icon": "ClipboardList"
         },
         {
@@ -49,8 +45,21 @@
           "href": "#"
         },
         {
-          "label": "Gallery",
-          "href": "#"
+          "label": "Pages",
+          "href": "#",
+          "subItems": [
+            {
+              "label": "Awards & Achievements",
+              "href": "/awards",
+              "icon": "Award"
+            },
+            {
+              "label": "Our Team",
+              "href": "/our-team",
+              "icon": "Users"
+            }
+          ],
+          "icon": "ClipboardList"
         },
         {
           "label": "Contact Us",
@@ -193,6 +202,70 @@
                   "component": "EventServices2"
                 }
               ]
+            },
+            "our-mission": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerMission"
+                },
+                {
+                  "key": "MissionVision",
+                  "component": "EventMissionVision2"
+                },
+                {
+                  "key": "Stats",
+                  "component": "EventStats2"
+                }
+              ]
+            },
+            "our-vision": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerVision"
+                },
+                {
+                  "key": "MissionVision",
+                  "component": "EventMissionVision2"
+                },
+                {
+                  "key": "Stats",
+                  "component": "EventStats2"
+                }
+              ]
+            },
+            "awards": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerAwards"
+                },
+                {
+                  "key": "AwardsAbout",
+                  "component": "EventAwardsAbout"
+                },
+                {
+                  "key": "AwardsStats",
+                  "component": "EventAwardsStats"
+                },
+                {
+                  "key": "AwardsCertificates",
+                  "component": "EventAwardsCertificates"
+                }
+              ]
+            },
+            "our-team": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerTeam"
+                },
+                {
+                  "key": "TeamPageGrid",
+                  "component": "EventTeamPageGrid"
+                }
+              ]
             }
           }
         }
@@ -316,6 +389,67 @@
                   "icon": "Music"
                 }
               ]
+            }
+          }
+        },
+        "WhyChooseUsDetail": {
+          "variants": {
+            "EventWhyChooseUsDetail": {
+              "topSection": {
+                "subtitle": "Why Choose Us",
+                "titlePart1": "Why Eventora Is ",
+                "titlePart2": "The Right Choice",
+                "description": "At Eventora, we don't just plan events - we create experiences that leave lasting impressions. Our passion, creativity and attention to detail set us apart and make us the trusted partner for your special moments.",
+                "image": "/whychoose/a1.png",
+                "goal": {
+                  "title": "Our Goal",
+                  "text": "To turn your vision into extraordinary events that inspire and delight."
+                }
+              },
+              "features": [
+                {
+                  "title": "Experience & Expertise",
+                  "description": "Years of experience in delivering successful events of all sizes and types with perfection.",
+                  "icon": "Award"
+                },
+                {
+                  "title": "Creative & Unique Concepts",
+                  "description": "We bring fresh ideas and creative concepts to make your event unique and unforgettable.",
+                  "icon": "Lightbulb"
+                },
+                {
+                  "title": "End-To-End Management",
+                  "description": "From planning to execution, we handle everything so you can enjoy your event stress-free.",
+                  "icon": "ClipboardList"
+                },
+                {
+                  "title": "Dedicated Team",
+                  "description": "Our passionate team works dedicatedly to ensure flawless execution and happy clients.",
+                  "icon": "Users"
+                },
+                {
+                  "title": "Quality You Can Trust",
+                  "description": "We maintain the highest quality standards in every detail to deliver the best experience.",
+                  "icon": "ShieldCheck"
+                },
+                {
+                  "title": "Value For Money",
+                  "description": "We offer the best services within your budget without compromising on quality.",
+                  "icon": "CircleDollarSign"
+                }
+              ],
+              "commitmentSection": {
+                "subtitle": "OUR COMMITMENT",
+                "title": "We Are Committed To Making Your Event Truly Memorable",
+                "description": "We believe every event is special and deserves personalized attention. Our commitment is to deliver exceptional experiences that exceed your expectations and create memories that last a lifetime.",
+                "mainImage": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                "secondaryImage": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                "list": [
+                  "Personalized approach for every event",
+                  "Timely execution with perfect coordination",
+                  "100% client satisfaction is our priority"
+                ]
+              }
             }
           }
         },
@@ -528,6 +662,76 @@
                 }
               ],
               "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerMission": {
+              "title": "Our Mission",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Our Mission",
+                  "href": "/our-mission"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerVision": {
+              "title": "Our Vision",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Our Vision",
+                  "href": "/our-vision"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerAwards": {
+              "title": "Awards & Certificate",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Awards & Certificate",
+                  "href": "/awards"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerTeam": {
+              "title": "Our Teams",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Our Teams",
+                  "href": "/our-team"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerWhyChooseUs": {
+              "title": "Why Choose Us",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Why Choose Us",
+                  "href": "/why-choose-us"
+                }
+              ],
+              "backgroundImage": "/breadcrumb.png"
             }
           }
         },
@@ -583,6 +787,544 @@
                   }
                 ]
               }
+            }
+          }
+        },
+        "AwardsAbout": {
+          "variants": {
+            "EventAwardsAbout": {
+              "subtitle": "RECOGNITION OF EXCELLENCE",
+              "title": "Awards & Achievements",
+              "description": "At Viventro, every celebration we create is driven by passion, creativity, and dedication. Over the years, our commitment to delivering exceptional events has been recognized and appreciated by our clients, partners, and industry leaders.\n\nThese awards inspire us to continue raising the bar and crafting unforgettable experiences for every occasion.",
+              "buttonText": "Contact Us",
+              "buttonLink": "/contact-us",
+              "image": "/awards/awardcover2.png"
+            }
+          }
+        },
+        "AwardsStats": {
+          "variants": {
+            "EventAwardsStats": {
+              "title": "Our Achievements",
+              "items": [
+                {
+                  "value": "25+",
+                  "label": "Awards Won",
+                  "icon": "Trophy"
+                },
+                {
+                  "value": "8+",
+                  "label": "Years of Excellence",
+                  "icon": "Award"
+                },
+                {
+                  "value": "500+",
+                  "label": "Events Completed",
+                  "icon": "Users"
+                },
+                {
+                  "value": "98%",
+                  "label": "Client Satisfaction",
+                  "icon": "Smile"
+                },
+                {
+                  "value": "50+",
+                  "label": "Trusted Partners",
+                  "icon": "Handshake"
+                }
+              ]
+            }
+          }
+        },
+        "AwardsCertificates": {
+          "variants": {
+            "EventAwardsCertificates": {
+              "title": "Our Certificates & Recognitions",
+              "images": [
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png",
+                "/awards/awardcover2.png"
+              ]
+            }
+          }
+        },
+        "TeamPageGrid": {
+          "variants": {
+            "EventTeamPageGrid": {
+              "subtitle": "OUR TEAM",
+              "title": "Meet The Team Behind Your Perfect Event",
+              "description": "We are a passionate team of event experts, creators and planners dedicated to turning your vision into extraordinary experiences.",
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Rohit Sharma",
+                  "role": "Founder & CEO",
+                  "image": "/team/1.png",
+                  "email": "rohit@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/rohitsharma",
+                  "bio": "Rohit believes every event tells a story. His leadership, innovation, and attention to detail have helped Eventora become a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Founder & CEO, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner 2022",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "name": "Priya Mehta",
+                  "role": "Event Manager",
+                  "image": "/team/2.png",
+                  "email": "priya@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/priyamehta",
+                  "bio": "A passionate leader and visionary who believes every event tells a unique story. With a keen eye for detail and a dedication to client satisfaction, they have helped build a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Senior Position, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "name": "Arjun Verma",
+                  "role": "Creative Director",
+                  "image": "/team/3.png",
+                  "email": "arjun@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/arjunverma",
+                  "bio": "A passionate leader and visionary who believes every event tells a unique story. With a keen eye for detail and a dedication to client satisfaction, they have helped build a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Senior Position, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 4,
+                  "name": "Neha Gupta",
+                  "role": "Operations Manager",
+                  "image": "/team/4.png",
+                  "email": "neha@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/nehagupta",
+                  "bio": "A passionate leader and visionary who believes every event tells a unique story. With a keen eye for detail and a dedication to client satisfaction, they have helped build a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Senior Position, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 5,
+                  "name": "Rohit Sharma",
+                  "role": "Founder & CEO",
+                  "image": "/team/1.png",
+                  "email": "rohit@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/rohitsharma",
+                  "bio": "Rohit believes every event tells a story. His leadership, innovation, and attention to detail have helped Eventora become a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Founder & CEO, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner 2022",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 6,
+                  "name": "Priya Mehta",
+                  "role": "Event Manager",
+                  "image": "/team/2.png",
+                  "email": "priya@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/priyamehta",
+                  "bio": "A passionate leader and visionary who believes every event tells a unique story. With a keen eye for detail and a dedication to client satisfaction, they have helped build a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Senior Position, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 7,
+                  "name": "Arjun Verma",
+                  "role": "Creative Director",
+                  "image": "/team/3.png",
+                  "email": "arjun@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/arjunverma",
+                  "bio": "A passionate leader and visionary who believes every event tells a unique story. With a keen eye for detail and a dedication to client satisfaction, they have helped build a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Senior Position, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 8,
+                  "name": "Neha Gupta",
+                  "role": "Operations Manager",
+                  "image": "/team/4.png",
+                  "email": "neha@eventora.com",
+                  "phone": "+1 123 456 7890",
+                  "linkedin": "/nehagupta",
+                  "bio": "A passionate leader and visionary who believes every event tells a unique story. With a keen eye for detail and a dedication to client satisfaction, they have helped build a trusted name in the event management industry.",
+                  "skills": [
+                    {
+                      "name": "Event Planning & Management",
+                      "percentage": 98
+                    },
+                    {
+                      "name": "Client Relationship",
+                      "percentage": 95
+                    },
+                    {
+                      "name": "Budgeting & Strategy",
+                      "percentage": 90
+                    },
+                    {
+                      "name": "Vendor Management",
+                      "percentage": 92
+                    },
+                    {
+                      "name": "Leadership & Team Building",
+                      "percentage": 95
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "yearRange": "2014 - Present",
+                      "title": "Senior Position, Eventora",
+                      "description": "Leading the company vision, strategy, and growth. Overseeing all aspects of event planning and client satisfaction."
+                    },
+                    {
+                      "yearRange": "2011 - 2014",
+                      "title": "Event Manager, Celebrate Inc.",
+                      "description": "Managed multiple events and client accounts. Specialized in corporate and social events."
+                    },
+                    {
+                      "yearRange": "2008 - 2011",
+                      "title": "Event Coordinator, Dream Events",
+                      "description": "Coordinated logistics, vendor relations, and on-site event execution."
+                    },
+                    {
+                      "yearRange": "Achievements",
+                      "title": "",
+                      "achievements": [
+                        "500+ Successful Events Delivered",
+                        "Recognized as Top Event Planner",
+                        "Trusted by 10K+ Happy Clients"
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           }
         }
