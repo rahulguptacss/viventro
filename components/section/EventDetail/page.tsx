@@ -190,7 +190,7 @@ export default function EventDetail({ data }: EventDetailProps) {
           </div>
 
           {/* SIDEBAR */}
-          <div className="w-full lg:w-[32%] flex flex-col gap-8">
+          <div className="w-full lg:w-[32%] flex flex-col gap-8 sticky top-32 self-start">
             
             {/* Event Details Card */}
             <div className="bg-[#FFFCF8] rounded-[16px] shadow-sm border border-[#F3E6D5] relative overflow-hidden">

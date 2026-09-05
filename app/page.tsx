@@ -43,7 +43,7 @@ export default async function Home() {
         const sectionData = sections[comp.key]?.variants[comp.component];
         if (!sectionData) return null;
         
-        return <Component key={index} data={sectionData} />;
+        return <Component key={index} data={sectionData} {...(comp.key === 'Blog' ? { limit: 3 } : {})} />;
       })}
     </main>
   );

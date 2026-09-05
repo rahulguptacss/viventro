@@ -21,10 +21,9 @@ export default function GlobalLayout({ children, headerData, footerData, banners
   
   const isHome = currentRoute === "home";
   
-  let currentBanner = banners[currentRoute];
-  if (!currentBanner && baseRoute) {
-    currentBanner = banners[baseRoute];
-    
+  let currentBanner = banners[currentRoute] || banners[baseRoute];
+  
+  if (currentBanner && baseRoute) {
     // Override banner details for specific dynamic routes
     if (baseRoute === 'our-team' && currentRoute !== 'our-team') {
       currentBanner = {
@@ -32,7 +31,47 @@ export default function GlobalLayout({ children, headerData, footerData, banners
         title: "Team Detail",
         breadcrumbs: [
           { label: "Home", href: "/" },
+          { label: "Our Team", href: "/our-team" },
           { label: "Team Detail", href: "#" }
+        ]
+      };
+    } else if (baseRoute === 'services' && currentRoute !== 'services') {
+      currentBanner = {
+        ...currentBanner,
+        title: "Service Detail",
+        breadcrumbs: [
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Service Detail", href: "#" }
+        ]
+      };
+    } else if (baseRoute === 'events' && currentRoute !== 'events') {
+      currentBanner = {
+        ...currentBanner,
+        title: "Event Detail",
+        breadcrumbs: [
+          { label: "Home", href: "/" },
+          { label: "Events", href: "/events" },
+          { label: "Event Detail", href: "#" }
+        ]
+      };
+    } else if (baseRoute === 'career') {
+      currentBanner = {
+        ...currentBanner,
+        title: "Career",
+        breadcrumbs: [
+          { label: "Home", href: "/" },
+          { label: "Career", href: "#" }
+        ]
+      };
+    } else if (baseRoute === 'blog' && currentRoute !== 'blog') {
+      currentBanner = {
+        ...currentBanner,
+        title: "Blog Detail",
+        breadcrumbs: [
+          { label: "Home", href: "/" },
+          { label: "Blogs", href: "/blog" },
+          { label: "Blog Detail", href: "#" }
         ]
       };
     }

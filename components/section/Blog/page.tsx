@@ -19,13 +19,18 @@ interface BlogProps {
   data: {
     subtitle: string;
     title: string;
+    titleHighlight?: string;
     description: string;
     buttonText: string;
+    readMoreText?: string;
     items: BlogItem[];
   };
+  limit?: number;
+  showButton?: boolean;
 }
 
-export default function Blog({ data }: BlogProps) {
+export default function Blog({ data, limit, showButton = true }: BlogProps) {
+  const displayedItems = limit ? data.items.slice(0, limit) : data.items;
   return (
     <section className="pt-8 pb-8 lg:pt-10 lg:pb-10 bg-[#FAFAFA] text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,12 +56,12 @@ export default function Blog({ data }: BlogProps) {
               viewport={{ once: true }}
               className="text-[36px] sm:text-[42px] lg:text-[48px] font-bold leading-[1.1] text-black tracking-tight"
             >
-              {data.title.split('Success Stories').map((text, i, arr) => (
+              {data.titleHighlight ? data.title.split(data.titleHighlight).map((text, i, arr) => (
                 <span key={i}>
                   {text}
-                  {i === 0 && arr.length > 1 && <span className="text-[#D4AF37]">Success Stories</span>}
+                  {i === 0 && arr.length > 1 && <span className="text-[#D4AF37]">{data.titleHighlight}</span>}
                 </span>
-              ))}
+              )) : data.title}
             </motion.h2>
 
             {/* Subtle Divider */}
@@ -82,23 +87,25 @@ export default function Blog({ data }: BlogProps) {
             <p className="text-gray-500 leading-relaxed text-[15px]">
               {data.description}
             </p>
-            <div>
-              <Link 
-                href="#" 
-                className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#b5952f] text-white pl-6 pr-1.5 py-1.5 rounded-[30px] font-bold transition-colors text-[15px] group shadow-lg shadow-[#D4AF37]/20"
-              >
-                {data.buttonText}
-                <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center shrink-0">
-                  <ArrowRight className="w-4 h-4 text-[#D4AF37] -rotate-45 group-hover:rotate-0 transition-transform" />
-                </div>
-              </Link>
-            </div>
+            {showButton && (
+              <div>
+                <Link 
+                  href="/blog" 
+                  className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#b5952f] text-white pl-6 pr-1.5 py-1.5 rounded-[30px] font-bold transition-colors text-[15px] group shadow-lg shadow-[#D4AF37]/20"
+                >
+                  {data.buttonText}
+                  <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center shrink-0">
+                    <ArrowRight className="w-4 h-4 text-[#D4AF37] -rotate-45 group-hover:rotate-0 transition-transform" />
+                  </div>
+                </Link>
+              </div>
+            )}
           </motion.div>
         </div>
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {data.items.map((post, index) => (
+          {displayedItems.map((post, index) => (
             <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 30 }}
@@ -138,7 +145,7 @@ export default function Blog({ data }: BlogProps) {
                 <div className="w-full h-[1px] bg-gray-100 mb-3"></div>
                 
                 <Link href={`/blog/${post.id}`} className="px-1 text-[14px] font-bold text-[#D4AF37] inline-flex items-center gap-2 group/link hover:text-[#b5952f] transition-colors">
-                  Read More
+                  {data.readMoreText || "Read More"}
                   <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>

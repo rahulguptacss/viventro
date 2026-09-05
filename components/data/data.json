@@ -77,9 +77,18 @@
               "label": "FAQ",
               "href": "/faq",
               "icon": "HelpCircle"
+            },
+            {
+              "label": "Career",
+              "href": "/career",
+              "icon": "Briefcase"
             }
           ],
           "icon": "ClipboardList"
+        },
+        {
+          "label": "Blogs",
+          "href": "/blog"
         },
         {
           "label": "Contact Us",
@@ -306,6 +315,42 @@
                   "component": "EventPageBannerOurPartners"
                 }
               ]
+            },
+            "blog": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerBlog"
+                },
+                {
+                  "key": "Blog",
+                  "component": "EventBlog2"
+                }
+              ]
+            },
+            "blog-detail": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerBlogDetail"
+                }
+              ]
+            },
+            "career": {
+              "components": [
+                {
+                  "component": "EventPageBanner2",
+                  "key": "PageBanner"
+                },
+                {
+                  "component": "CareerHero1",
+                  "key": "CareerHero"
+                },
+                {
+                  "component": "CareerJobs1",
+                  "key": "CareerJobs"
+                }
+              ]
             }
           }
         }
@@ -408,35 +453,245 @@
                   "title": "Birthday & Private Parties",
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
                   "icon": "Cake",
-                  "image": "/eventservices/2.webp"
+                  "image": "/eventservices/2.webp",
+                  "subtitle": "Planning & Coordination",
+                  "detailedDescription": "Experience seamless planning and execution for your Birthday & Private Parties. f every detail - from concept to execution - to create elegant, memorable and stress-free weddings that you and your guests will cherish forever.",
+                  "sidebarImage": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  "features": [
+                    {
+                      "title": "Complete Wedding Planning",
+                      "description": "End-to-end planning and management for a seamless wedding experience.",
+                      "icon": "ClipboardCheck"
+                    },
+                    {
+                      "title": "Venue Selection & Management",
+                      "description": "We help you find the perfect venue and handle all the arrangements.",
+                      "icon": "Tent"
+                    },
+                    {
+                      "title": "Décor & Theme Design",
+                      "description": "Stunning themes and creative décor that reflect your personality and style.",
+                      "icon": "Flower"
+                    },
+                    {
+                      "title": "Vendor Coordination",
+                      "description": "We work with trusted vendors and manage everything to ensure perfect coordination.",
+                      "icon": "Users"
+                    },
+                    {
+                      "title": "On-Day Management",
+                      "description": "Our team is there on your big day to manage every detail flawlessly.",
+                      "icon": "CalendarCheck"
+                    },
+                    {
+                      "title": "Personalized Services",
+                      "description": "Tailored solutions as per your preferences, traditions and budget.",
+                      "icon": "Diamond"
+                    }
+                  ],
+                  "whyChooseUs": [
+                    "Experienced wedding planners with a passion for perfection.",
+                    "Personalized approach tailored to your style and preferences.",
+                    "Transparent pricing with no hidden surprises.",
+                    "Timely execution and attention to every detail.",
+                    "We create unforgettable memories that last a lifetime."
+                  ]
                 },
                 {
                   "id": 3,
                   "title": "Corporate Events & Conferences",
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
                   "icon": "Briefcase",
-                  "image": "/eventservices/3.webp"
+                  "image": "/eventservices/3.webp",
+                  "subtitle": "Planning & Coordination",
+                  "detailedDescription": "Experience seamless planning and execution for your Corporate Events & Conferences. f every detail - from concept to execution - to create elegant, memorable and stress-free weddings that you and your guests will cherish forever.",
+                  "sidebarImage": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  "features": [
+                    {
+                      "title": "Complete Wedding Planning",
+                      "description": "End-to-end planning and management for a seamless wedding experience.",
+                      "icon": "ClipboardCheck"
+                    },
+                    {
+                      "title": "Venue Selection & Management",
+                      "description": "We help you find the perfect venue and handle all the arrangements.",
+                      "icon": "Tent"
+                    },
+                    {
+                      "title": "Décor & Theme Design",
+                      "description": "Stunning themes and creative décor that reflect your personality and style.",
+                      "icon": "Flower"
+                    },
+                    {
+                      "title": "Vendor Coordination",
+                      "description": "We work with trusted vendors and manage everything to ensure perfect coordination.",
+                      "icon": "Users"
+                    },
+                    {
+                      "title": "On-Day Management",
+                      "description": "Our team is there on your big day to manage every detail flawlessly.",
+                      "icon": "CalendarCheck"
+                    },
+                    {
+                      "title": "Personalized Services",
+                      "description": "Tailored solutions as per your preferences, traditions and budget.",
+                      "icon": "Diamond"
+                    }
+                  ],
+                  "whyChooseUs": [
+                    "Experienced wedding planners with a passion for perfection.",
+                    "Personalized approach tailored to your style and preferences.",
+                    "Transparent pricing with no hidden surprises.",
+                    "Timely execution and attention to every detail.",
+                    "We create unforgettable memories that last a lifetime."
+                  ]
                 },
                 {
                   "id": 4,
                   "title": "Engagements & Anniversaries",
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
                   "icon": "HeartHandshake",
-                  "image": "/eventservices/4.webp"
+                  "image": "/eventservices/4.webp",
+                  "subtitle": "Planning & Coordination",
+                  "detailedDescription": "Experience seamless planning and execution for your Engagements & Anniversaries. f every detail - from concept to execution - to create elegant, memorable and stress-free weddings that you and your guests will cherish forever.",
+                  "sidebarImage": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  "features": [
+                    {
+                      "title": "Complete Wedding Planning",
+                      "description": "End-to-end planning and management for a seamless wedding experience.",
+                      "icon": "ClipboardCheck"
+                    },
+                    {
+                      "title": "Venue Selection & Management",
+                      "description": "We help you find the perfect venue and handle all the arrangements.",
+                      "icon": "Tent"
+                    },
+                    {
+                      "title": "Décor & Theme Design",
+                      "description": "Stunning themes and creative décor that reflect your personality and style.",
+                      "icon": "Flower"
+                    },
+                    {
+                      "title": "Vendor Coordination",
+                      "description": "We work with trusted vendors and manage everything to ensure perfect coordination.",
+                      "icon": "Users"
+                    },
+                    {
+                      "title": "On-Day Management",
+                      "description": "Our team is there on your big day to manage every detail flawlessly.",
+                      "icon": "CalendarCheck"
+                    },
+                    {
+                      "title": "Personalized Services",
+                      "description": "Tailored solutions as per your preferences, traditions and budget.",
+                      "icon": "Diamond"
+                    }
+                  ],
+                  "whyChooseUs": [
+                    "Experienced wedding planners with a passion for perfection.",
+                    "Personalized approach tailored to your style and preferences.",
+                    "Transparent pricing with no hidden surprises.",
+                    "Timely execution and attention to every detail.",
+                    "We create unforgettable memories that last a lifetime."
+                  ]
                 },
                 {
                   "id": 5,
                   "title": "Destination Weddings",
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
                   "icon": "Plane",
-                  "image": "/eventservices/5.webp"
+                  "image": "/eventservices/5.webp",
+                  "subtitle": "Planning & Coordination",
+                  "detailedDescription": "Experience seamless planning and execution for your Destination Weddings. f every detail - from concept to execution - to create elegant, memorable and stress-free weddings that you and your guests will cherish forever.",
+                  "sidebarImage": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  "features": [
+                    {
+                      "title": "Complete Wedding Planning",
+                      "description": "End-to-end planning and management for a seamless wedding experience.",
+                      "icon": "ClipboardCheck"
+                    },
+                    {
+                      "title": "Venue Selection & Management",
+                      "description": "We help you find the perfect venue and handle all the arrangements.",
+                      "icon": "Tent"
+                    },
+                    {
+                      "title": "Décor & Theme Design",
+                      "description": "Stunning themes and creative décor that reflect your personality and style.",
+                      "icon": "Flower"
+                    },
+                    {
+                      "title": "Vendor Coordination",
+                      "description": "We work with trusted vendors and manage everything to ensure perfect coordination.",
+                      "icon": "Users"
+                    },
+                    {
+                      "title": "On-Day Management",
+                      "description": "Our team is there on your big day to manage every detail flawlessly.",
+                      "icon": "CalendarCheck"
+                    },
+                    {
+                      "title": "Personalized Services",
+                      "description": "Tailored solutions as per your preferences, traditions and budget.",
+                      "icon": "Diamond"
+                    }
+                  ],
+                  "whyChooseUs": [
+                    "Experienced wedding planners with a passion for perfection.",
+                    "Personalized approach tailored to your style and preferences.",
+                    "Transparent pricing with no hidden surprises.",
+                    "Timely execution and attention to every detail.",
+                    "We create unforgettable memories that last a lifetime."
+                  ]
                 },
                 {
                   "id": 6,
                   "title": "Entertainment & Production",
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
                   "icon": "Music",
-                  "image": "/eventservices/6.webp"
+                  "image": "/eventservices/6.webp",
+                  "subtitle": "Planning & Coordination",
+                  "detailedDescription": "Experience seamless planning and execution for your Entertainment & Production. f every detail - from concept to execution - to create elegant, memorable and stress-free weddings that you and your guests will cherish forever.",
+                  "sidebarImage": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  "features": [
+                    {
+                      "title": "Complete Wedding Planning",
+                      "description": "End-to-end planning and management for a seamless wedding experience.",
+                      "icon": "ClipboardCheck"
+                    },
+                    {
+                      "title": "Venue Selection & Management",
+                      "description": "We help you find the perfect venue and handle all the arrangements.",
+                      "icon": "Tent"
+                    },
+                    {
+                      "title": "Décor & Theme Design",
+                      "description": "Stunning themes and creative décor that reflect your personality and style.",
+                      "icon": "Flower"
+                    },
+                    {
+                      "title": "Vendor Coordination",
+                      "description": "We work with trusted vendors and manage everything to ensure perfect coordination.",
+                      "icon": "Users"
+                    },
+                    {
+                      "title": "On-Day Management",
+                      "description": "Our team is there on your big day to manage every detail flawlessly.",
+                      "icon": "CalendarCheck"
+                    },
+                    {
+                      "title": "Personalized Services",
+                      "description": "Tailored solutions as per your preferences, traditions and budget.",
+                      "icon": "Diamond"
+                    }
+                  ],
+                  "whyChooseUs": [
+                    "Experienced wedding planners with a passion for perfection.",
+                    "Personalized approach tailored to your style and preferences.",
+                    "Transparent pricing with no hidden surprises.",
+                    "Timely execution and attention to every detail.",
+                    "We create unforgettable memories that last a lifetime."
+                  ]
                 }
               ]
             }
@@ -770,35 +1025,361 @@
             "EventBlog2": {
               "subtitle": "OUR BLOG",
               "title": "Explore The Latest Event Tips, Trends & Success Stories",
+              "titleHighlight": "Success Stories",
               "description": "Stay inspired with expert tips, trending ideas and real event stories that create impact.",
               "buttonText": "View More",
+              "readMoreText": "Read More",
+              "sidebar": {
+                "recentPostsTitle": "Recent Posts",
+                "cta": {
+                  "title": "Planning Your\nDream Event?",
+                  "description": "Viventro turns your ideas into unforgettable experiences with stunning decor and flawless execution.",
+                  "buttonText": "Get In Touch",
+                  "buttonHref": "/contact-us"
+                }
+              },
               "items": [
                 {
                   "id": 1,
                   "title": "Event Planning Checklist: Your Step-by-Step Guide",
                   "description": "A complete checklist to help you plan, organize and execute flawless events without missing any detail.",
-                  "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                  "image": "/blog/1.jpg",
                   "date": "22 May 2024",
                   "author": "6 min read",
-                  "category": "PLANNING"
+                  "category": "PLANNING",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dive into our insights on: Event Planning Checklist: Your Step-by-Step Guide. Wedding decor sets the tone for your big day and creates memories that last forever. At Viventro, we stay ahead of the latest decor trends to design celebrations that are stylish, meaningful, and uniquely yours."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Here are the top wedding decor trends that are making waves this season."
+                    },
+                    {
+                      "type": "numbered-list",
+                      "items": [
+                        {
+                          "title": "Sustainable & Eco-Friendly Decor",
+                          "description": "Couples are choosing eco-friendly materials, reusable decor, and locally sourced flowers to create stunning celebrations while caring for the environment."
+                        },
+                        {
+                          "title": "Minimalist Elegance",
+                          "description": "Clean lines, neutral palettes, and subtle details are in trend. Minimal decor creates a sophisticated and timeless look that leaves a lasting impression."
+                        },
+                        {
+                          "title": "Floral Installations",
+                          "description": "From hanging floral canopies to lush aisle arrangements, statement florals are stealing the spotlight and adding unmatched charm."
+                        },
+                        {
+                          "title": "Romantic Lighting",
+                          "description": "Fairy lights, chandeliers, candles, and lanterns bring warmth and romance, transforming any space into a magical wonderland."
+                        },
+                        {
+                          "title": "Personalized & Themed Decor",
+                          "description": "Custom signage, monograms, and unique themes make weddings more personal and memorable, reflecting the couple's love story."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "text": "The right decor turns your wedding into a memory you and your guests will cherish forever."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "At Viventro, we believe every wedding is unique and deserves decor that speaks your story."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Let us bring your dream celebration to life with creativity, passion, and flawless execution."
+                    }
+                  ],
+                  "comments": "No Comments"
                 },
                 {
                   "id": 2,
-                  "title": "Top Wedding Decor Trends For 2024",
+                  "title": "Top Wedding Decor Trends",
                   "description": "From floral fantasy to minimal elegance, explore the top decor trends making weddings unforgettable.",
-                  "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-                  "date": "18 May 2024",
-                  "author": "5 min read",
-                  "category": "DECOR & THEMES"
+                  "image": "/blog/2.jpg",
+                  "date": "May 25, 2026",
+                  "author": "By Viventro Team",
+                  "category": "DECOR & THEMES",
+                  "comments": "No Comments",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Wedding decor sets the tone for your big day and creates memories that last forever. At Viventro, we stay ahead of the latest decor trends to design celebrations that are stylish, meaningful, and uniquely yours."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Here are the top wedding decor trends that are making waves this season."
+                    },
+                    {
+                      "type": "numbered-list",
+                      "items": [
+                        {
+                          "title": "Sustainable & Eco-Friendly Decor",
+                          "description": "Couples are choosing eco-friendly materials, reusable decor, and locally sourced flowers to create stunning celebrations while caring for the environment."
+                        },
+                        {
+                          "title": "Minimalist Elegance",
+                          "description": "Clean lines, neutral palettes, and subtle details are in trend. Minimal decor creates a sophisticated and timeless look that leaves a lasting impression."
+                        },
+                        {
+                          "title": "Floral Installations",
+                          "description": "From hanging floral canopies to lush aisle arrangements, statement florals are stealing the spotlight and adding unmatched charm."
+                        },
+                        {
+                          "title": "Romantic Lighting",
+                          "description": "Fairy lights, chandeliers, candles, and lanterns bring warmth and romance, transforming any space into a magical wonderland."
+                        },
+                        {
+                          "title": "Personalized & Themed Decor",
+                          "description": "Custom signage, monograms, and unique themes make weddings more personal and memorable, reflecting the couple's love story."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "text": "The right decor turns your wedding into a memory you and your guests will cherish forever."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "At Viventro, we believe every wedding is unique and deserves decor that speaks your story."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Let us bring your dream celebration to life with creativity, passion, and flawless execution."
+                    }
+                  ]
                 },
                 {
                   "id": 3,
                   "title": "How To Make Your Corporate Event Truly Impactful",
                   "description": "Proven strategies to engage your audience and create corporate events that leave a lasting impact.",
-                  "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+                  "image": "/blog/3.jpg",
                   "date": "12 May 2024",
                   "author": "7 min read",
-                  "category": "EVENT SUCCESS"
+                  "category": "EVENT SUCCESS",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dive into our insights on: How To Make Your Corporate Event Truly Impactful. Wedding decor sets the tone for your big day and creates memories that last forever. At Viventro, we stay ahead of the latest decor trends to design celebrations that are stylish, meaningful, and uniquely yours."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Here are the top wedding decor trends that are making waves this season."
+                    },
+                    {
+                      "type": "numbered-list",
+                      "items": [
+                        {
+                          "title": "Sustainable & Eco-Friendly Decor",
+                          "description": "Couples are choosing eco-friendly materials, reusable decor, and locally sourced flowers to create stunning celebrations while caring for the environment."
+                        },
+                        {
+                          "title": "Minimalist Elegance",
+                          "description": "Clean lines, neutral palettes, and subtle details are in trend. Minimal decor creates a sophisticated and timeless look that leaves a lasting impression."
+                        },
+                        {
+                          "title": "Floral Installations",
+                          "description": "From hanging floral canopies to lush aisle arrangements, statement florals are stealing the spotlight and adding unmatched charm."
+                        },
+                        {
+                          "title": "Romantic Lighting",
+                          "description": "Fairy lights, chandeliers, candles, and lanterns bring warmth and romance, transforming any space into a magical wonderland."
+                        },
+                        {
+                          "title": "Personalized & Themed Decor",
+                          "description": "Custom signage, monograms, and unique themes make weddings more personal and memorable, reflecting the couple's love story."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "text": "The right decor turns your wedding into a memory you and your guests will cherish forever."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "At Viventro, we believe every wedding is unique and deserves decor that speaks your story."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Let us bring your dream celebration to life with creativity, passion, and flawless execution."
+                    }
+                  ],
+                  "comments": "No Comments"
+                },
+                {
+                  "id": 4,
+                  "title": "5 Budget-Friendly Tips For A Dream Birthday Party",
+                  "description": "Celebrate in style without breaking the bank. Discover smart ideas to create a memorable birthday on any budget.",
+                  "image": "/blog/4.jpg",
+                  "date": "05 May 2024",
+                  "author": "4 min read",
+                  "category": "BIRTHDAY",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dive into our insights on: 5 Budget-Friendly Tips For A Dream Birthday Party. Wedding decor sets the tone for your big day and creates memories that last forever. At Viventro, we stay ahead of the latest decor trends to design celebrations that are stylish, meaningful, and uniquely yours."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Here are the top wedding decor trends that are making waves this season."
+                    },
+                    {
+                      "type": "numbered-list",
+                      "items": [
+                        {
+                          "title": "Sustainable & Eco-Friendly Decor",
+                          "description": "Couples are choosing eco-friendly materials, reusable decor, and locally sourced flowers to create stunning celebrations while caring for the environment."
+                        },
+                        {
+                          "title": "Minimalist Elegance",
+                          "description": "Clean lines, neutral palettes, and subtle details are in trend. Minimal decor creates a sophisticated and timeless look that leaves a lasting impression."
+                        },
+                        {
+                          "title": "Floral Installations",
+                          "description": "From hanging floral canopies to lush aisle arrangements, statement florals are stealing the spotlight and adding unmatched charm."
+                        },
+                        {
+                          "title": "Romantic Lighting",
+                          "description": "Fairy lights, chandeliers, candles, and lanterns bring warmth and romance, transforming any space into a magical wonderland."
+                        },
+                        {
+                          "title": "Personalized & Themed Decor",
+                          "description": "Custom signage, monograms, and unique themes make weddings more personal and memorable, reflecting the couple's love story."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "text": "The right decor turns your wedding into a memory you and your guests will cherish forever."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "At Viventro, we believe every wedding is unique and deserves decor that speaks your story."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Let us bring your dream celebration to life with creativity, passion, and flawless execution."
+                    }
+                  ],
+                  "comments": "No Comments"
+                },
+                {
+                  "id": 5,
+                  "title": "Behind The Scenes: How We Set Up A Grand Exhibition",
+                  "description": "An exclusive look at the planning, logistics and creativity that goes into organizing a world-class exhibition.",
+                  "image": "/blog/5.jpg",
+                  "date": "28 Apr 2024",
+                  "author": "6 min read",
+                  "category": "EXHIBITIONS",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dive into our insights on: Behind The Scenes: How We Set Up A Grand Exhibition. Wedding decor sets the tone for your big day and creates memories that last forever. At Viventro, we stay ahead of the latest decor trends to design celebrations that are stylish, meaningful, and uniquely yours."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Here are the top wedding decor trends that are making waves this season."
+                    },
+                    {
+                      "type": "numbered-list",
+                      "items": [
+                        {
+                          "title": "Sustainable & Eco-Friendly Decor",
+                          "description": "Couples are choosing eco-friendly materials, reusable decor, and locally sourced flowers to create stunning celebrations while caring for the environment."
+                        },
+                        {
+                          "title": "Minimalist Elegance",
+                          "description": "Clean lines, neutral palettes, and subtle details are in trend. Minimal decor creates a sophisticated and timeless look that leaves a lasting impression."
+                        },
+                        {
+                          "title": "Floral Installations",
+                          "description": "From hanging floral canopies to lush aisle arrangements, statement florals are stealing the spotlight and adding unmatched charm."
+                        },
+                        {
+                          "title": "Romantic Lighting",
+                          "description": "Fairy lights, chandeliers, candles, and lanterns bring warmth and romance, transforming any space into a magical wonderland."
+                        },
+                        {
+                          "title": "Personalized & Themed Decor",
+                          "description": "Custom signage, monograms, and unique themes make weddings more personal and memorable, reflecting the couple's love story."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "text": "The right decor turns your wedding into a memory you and your guests will cherish forever."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "At Viventro, we believe every wedding is unique and deserves decor that speaks your story."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Let us bring your dream celebration to life with creativity, passion, and flawless execution."
+                    }
+                  ],
+                  "comments": "No Comments"
+                },
+                {
+                  "id": 6,
+                  "title": "How To Choose The Perfect Venue For Your Event",
+                  "description": "From capacity and location to ambiance and amenities, here's everything to consider when selecting your event venue.",
+                  "image": "/blog/6.jpg",
+                  "date": "20 Apr 2024",
+                  "author": "5 min read",
+                  "category": "VENUE",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Dive into our insights on: How To Choose The Perfect Venue For Your Event. Wedding decor sets the tone for your big day and creates memories that last forever. At Viventro, we stay ahead of the latest decor trends to design celebrations that are stylish, meaningful, and uniquely yours."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Here are the top wedding decor trends that are making waves this season."
+                    },
+                    {
+                      "type": "numbered-list",
+                      "items": [
+                        {
+                          "title": "Sustainable & Eco-Friendly Decor",
+                          "description": "Couples are choosing eco-friendly materials, reusable decor, and locally sourced flowers to create stunning celebrations while caring for the environment."
+                        },
+                        {
+                          "title": "Minimalist Elegance",
+                          "description": "Clean lines, neutral palettes, and subtle details are in trend. Minimal decor creates a sophisticated and timeless look that leaves a lasting impression."
+                        },
+                        {
+                          "title": "Floral Installations",
+                          "description": "From hanging floral canopies to lush aisle arrangements, statement florals are stealing the spotlight and adding unmatched charm."
+                        },
+                        {
+                          "title": "Romantic Lighting",
+                          "description": "Fairy lights, chandeliers, candles, and lanterns bring warmth and romance, transforming any space into a magical wonderland."
+                        },
+                        {
+                          "title": "Personalized & Themed Decor",
+                          "description": "Custom signage, monograms, and unique themes make weddings more personal and memorable, reflecting the couple's love story."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "text": "The right decor turns your wedding into a memory you and your guests will cherish forever."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "At Viventro, we believe every wedding is unique and deserves decor that speaks your story."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Let us bring your dream celebration to life with creativity, passion, and flawless execution."
+                    }
+                  ],
+                  "comments": "No Comments"
                 }
               ]
             }
@@ -914,6 +1495,34 @@
                 {
                   "label": "Our Partners",
                   "href": "/our-partners"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerBlog": {
+              "title": "Blogs",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Blogs",
+                  "href": "/blog"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerBlogDetail": {
+              "title": "Blog Detail",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Blog Detail",
+                  "href": "#"
                 }
               ],
               "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
@@ -1671,6 +2280,60 @@
                   }
                 ]
               }
+            }
+          }
+        },
+        "CareerHero": {
+          "variants": {
+            "CareerHero1": {
+              "smallTitle": "BUILD YOUR FUTURE WITH VIVENTRO",
+              "title": "Build A Meaningful\nCareer With",
+              "highlightTitle": "Viventro",
+              "description": "At Viventro, we don't just plan events, we create unforgettable\nexperiences and build lasting relationships.\nJoin our passionate team and be a part of a journey where\ncreativity, teamwork, and innovation come together\nto make every celebration extraordinary.",
+              "buttonText": "View Open Positions",
+              "image": "/careercover.png"
+            }
+          }
+        },
+        "CareerJobs": {
+          "variants": {
+            "CareerJobs1": {
+              "smallTitle": "OPEN POSITIONS",
+              "title": "Explore Exciting Opportunities",
+              "items": [
+                {
+                  "id": 1,
+                  "title": "Event Planner",
+                  "description": "Plan and execute events from concept to completion while ensuring client satisfaction and memorable experiences.",
+                  "location": "Mumbai, Maharashtra",
+                  "type": "Full Time",
+                  "experience": "2-4 Years Experience"
+                },
+                {
+                  "id": 2,
+                  "title": "Wedding Coordinator",
+                  "description": "Coordinate all aspects of weddings and ensure seamless execution of every detail on the big day.",
+                  "location": "Mumbai, Maharashtra",
+                  "type": "Full Time",
+                  "experience": "1-3 Years Experience"
+                },
+                {
+                  "id": 3,
+                  "title": "Marketing Executive",
+                  "description": "Assist in marketing campaigns, social media, and promotions to help grow our brand and reach more clients.",
+                  "location": "Mumbai, Maharashtra",
+                  "type": "Full Time",
+                  "experience": "1-2 Years Experience"
+                },
+                {
+                  "id": 4,
+                  "title": "Client Relationship Executive",
+                  "description": "Build and maintain strong client relationships and ensure excellent communication throughout the event journey.",
+                  "location": "Mumbai, Maharashtra",
+                  "type": "Full Time",
+                  "experience": "1-3 Years Experience"
+                }
+              ]
             }
           }
         }

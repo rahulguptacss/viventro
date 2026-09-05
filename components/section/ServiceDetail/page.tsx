@@ -166,7 +166,7 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
           </div>
 
           {/* Sidebar */}
-          <div className="w-full lg:w-[30%] space-y-8">
+          <div className="w-full lg:w-[30%] space-y-8 sticky top-32 self-start">
 
             {/* All Services Widget */}
             <motion.div

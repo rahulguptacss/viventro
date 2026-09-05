@@ -149,6 +149,30 @@ export interface TeamData {
   members: TeamMember[];
 }
 
+export interface CareerHeroData {
+  smallTitle: string;
+  title: string;
+  highlightTitle: string;
+  description: string;
+  buttonText: string;
+  image: string;
+}
+
+export interface CareerJobItem {
+  id: number;
+  title: string;
+  description: string;
+  location: string;
+  type: string;
+  experience: string;
+}
+
+export interface CareerJobsData {
+  smallTitle: string;
+  title: string;
+  items: CareerJobItem[];
+}
+
 export interface TestimonialItem {
   id: number;
   name: string;
