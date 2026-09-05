@@ -53,7 +53,7 @@ export default function MissionVision({ data }: MissionVisionProps) {
             transition={{ delay: 0.1 }}
             className="mb-4 text-4xl font-extrabold sm:text-5xl lg:text-7xl tracking-tight"
           >
-            Our <span className="text-[#D4AF37]">Mission & Vision</span>
+            {data.title.split(' ')[0]} <span className="text-[#D4AF37]">{data.title.split(' ').slice(1).join(' ')}</span>
           </motion.h2>
           
           <motion.p
@@ -84,7 +84,7 @@ export default function MissionVision({ data }: MissionVisionProps) {
             )}
             <span className="relative z-10 flex items-center">
               <Target className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              Our Mission
+              {data.mission.title}
             </span>
           </button>
           <button
@@ -102,7 +102,7 @@ export default function MissionVision({ data }: MissionVisionProps) {
             )}
             <span className="relative z-10 flex items-center">
               <Eye className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              Our Vision
+              {data.vision.title}
             </span>
           </button>
         </div>
@@ -121,7 +121,7 @@ export default function MissionVision({ data }: MissionVisionProps) {
               {/* Image Side */}
               <div className="relative aspect-[4/3] w-full lg:aspect-auto">
                 <Image
-                  src={activeTab === "mission" ? "/img/mission.png" : "/img/vision.png"}
+                  src={currentData.image}
                   alt={currentData.title}
                   fill
                   className="object-cover"
@@ -132,8 +132,8 @@ export default function MissionVision({ data }: MissionVisionProps) {
               <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
                 <div className="mb-4">
                   <h3 className="text-3xl font-bold sm:text-4xl">
-                    <span className="text-[#D4AF37]">Our</span>{" "}
-                    <span className="text-white">{activeTab === "mission" ? "Mission" : "Vision"}</span>
+                    <span className="text-[#D4AF37]">{currentData.title.split(' ')[0]}</span>{" "}
+                    <span className="text-white">{currentData.title.split(' ').slice(1).join(' ')}</span>
                   </h3>
                 </div>
                 

@@ -12,12 +12,12 @@ interface PageBannerProps {
 export default function PageBanner({ data }: PageBannerProps) {
   return (
     <section 
-      className="relative flex h-[350px] w-full items-center justify-center overflow-hidden pt-20"
+      className="relative flex h-[250px] md:h-[400px] w-full items-center justify-center overflow-hidden pt-20"
     >
       {/* Background Image & Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${data.backgroundImage}')` }}
+        style={{ backgroundImage: `url('/breadcrumb.png')` }}
       />
       <div className="absolute inset-0 bg-black/60" />
 

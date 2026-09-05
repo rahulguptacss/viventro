@@ -42,7 +42,7 @@
         },
         {
           "label": "Events",
-          "href": "#"
+          "href": "/events"
         },
         {
           "label": "Pages",
@@ -57,13 +57,33 @@
               "label": "Our Team",
               "href": "/our-team",
               "icon": "Users"
+            },
+            {
+              "label": "Gallery",
+              "href": "/gallery",
+              "icon": "Image"
+            },
+            {
+              "label": "Our Partners",
+              "href": "/our-partners",
+              "icon": "Users"
+            },
+            {
+              "label": "Testimonials",
+              "href": "/testimonials",
+              "icon": "MessageSquare"
+            },
+            {
+              "label": "FAQ",
+              "href": "/faq",
+              "icon": "HelpCircle"
             }
           ],
           "icon": "ClipboardList"
         },
         {
           "label": "Contact Us",
-          "href": "#"
+          "href": "/contact-us"
         }
       ],
       "button": {
@@ -266,6 +286,26 @@
                   "component": "EventTeamPageGrid"
                 }
               ]
+            },
+            "testimonials": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerTestimonials"
+                },
+                {
+                  "key": "TestimonialsPageGrid",
+                  "component": "EventTestimonialsPageGrid"
+                }
+              ]
+            },
+            "our-partners": {
+              "components": [
+                {
+                  "key": "PageBanner",
+                  "component": "EventPageBannerOurPartners"
+                }
+              ]
             }
           }
         }
@@ -316,10 +356,52 @@
               "items": [
                 {
                   "id": 1,
-                  "title": "Wedding Planning & Coordination",
+                  "title": "Weddings & Engagements",
+                  "subtitle": "Planning & Coordination",
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+                  "detailedDescription": "Your love story deserves a celebration as unique as you are. Our expert wedding planners take care of every detail - from concept to execution - to create elegant, memorable and stress-free weddings that you and your guests will cherish forever.",
                   "icon": "Heart",
-                  "image": "/eventservices/1.webp"
+                  "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+                  "sidebarImage": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                  "features": [
+                    {
+                      "title": "Complete Wedding Planning",
+                      "description": "End-to-end planning and management for a seamless wedding experience.",
+                      "icon": "ClipboardCheck"
+                    },
+                    {
+                      "title": "Venue Selection & Management",
+                      "description": "We help you find the perfect venue and handle all the arrangements.",
+                      "icon": "Tent"
+                    },
+                    {
+                      "title": "Décor & Theme Design",
+                      "description": "Stunning themes and creative décor that reflect your personality and style.",
+                      "icon": "Flower"
+                    },
+                    {
+                      "title": "Vendor Coordination",
+                      "description": "We work with trusted vendors and manage everything to ensure perfect coordination.",
+                      "icon": "Users"
+                    },
+                    {
+                      "title": "On-Day Management",
+                      "description": "Our team is there on your big day to manage every detail flawlessly.",
+                      "icon": "CalendarCheck"
+                    },
+                    {
+                      "title": "Personalized Services",
+                      "description": "Tailored solutions as per your preferences, traditions and budget.",
+                      "icon": "Diamond"
+                    }
+                  ],
+                  "whyChooseUs": [
+                    "Experienced wedding planners with a passion for perfection.",
+                    "Personalized approach tailored to your style and preferences.",
+                    "Transparent pricing with no hidden surprises.",
+                    "Timely execution and attention to every detail.",
+                    "We create unforgettable memories that last a lifetime."
+                  ]
                 },
                 {
                   "id": 2,
@@ -608,6 +690,81 @@
             }
           }
         },
+        "TestimonialsPageGrid": {
+          "variants": {
+            "EventTestimonialsPageGrid": {
+              "subtitle": "TESTIMONIALS",
+              "titlePart1": "Stories Of Happiness From Our",
+              "titleHighlight": "Amazing Clients",
+              "description": "We take pride in creating unforgettable experiences. Here's what our clients have to say about their journey with Vivantro.",
+              "items": [
+                {
+                  "id": 1,
+                  "name": "Priya & Rohit",
+                  "role": "Wedding Ceremony",
+                  "quote": "Vivantro turned our dream wedding into a beautiful reality. Every little detail was perfectly planned and executed. We and our families will cherish these memories forever!",
+                  "image": "/tesimonails/client_1.jpg"
+                },
+                {
+                  "id": 2,
+                  "name": "Arjun Mehta",
+                  "role": "Corporate Event",
+                  "quote": "From the planning to the final execution, everything was flawless. Our corporate event was a huge success thanks to the amazing Vivantro team!",
+                  "image": "/tesimonails/client_2.jpg"
+                },
+                {
+                  "id": 3,
+                  "name": "Neha Sharma",
+                  "role": "Birthday Party",
+                  "quote": "We celebrated our daughter's birthday with Vivantro and the experience was outstanding. The team was professional, creative and super cooperative.",
+                  "image": "/tesimonails/client_3.jpg"
+                },
+                {
+                  "id": 4,
+                  "name": "Karan & Simran",
+                  "role": "Engagement Ceremony",
+                  "quote": "Their dedication and creativity are unmatched. They made our engagement event so special and memorable. Highly recommend Vivantro!",
+                  "image": "/tesimonails/client_4.jpg"
+                },
+                {
+                  "id": 5,
+                  "name": "Ananya Verma",
+                  "role": "Private Party",
+                  "quote": "The décor, the coordination, the vibes - everything was beyond our expectations. Thank you Vivantro for such a wonderful experience!",
+                  "image": "/tesimonails/client_5.jpg"
+                },
+                {
+                  "id": 6,
+                  "name": "Rohit Bansal",
+                  "role": "Corporate Event",
+                  "quote": "Excellent service, great team and unforgettable moments! Vivantro is our go-to partner for all our events.",
+                  "image": "/tesimonails/client_6.jpg"
+                },
+                {
+                  "id": 7,
+                  "name": "Amit & Sneha",
+                  "role": "Wedding Ceremony",
+                  "quote": "We couldn't have asked for a better team. The decor and execution were absolutely brilliant and magical.",
+                  "image": "/tesimonails/client_7.jpg"
+                },
+                {
+                  "id": 8,
+                  "name": "Pooja Desai",
+                  "role": "Anniversary Party",
+                  "quote": "They made our 25th anniversary celebration so memorable. Every guest was amazed by the arrangements.",
+                  "image": "/tesimonails/client_8.jpg"
+                },
+                {
+                  "id": 9,
+                  "name": "Vikas Khanna",
+                  "role": "Product Launch",
+                  "quote": "A truly professional agency. They handled our product launch seamlessly from start to finish.",
+                  "image": "/tesimonails/client_9.jpg"
+                }
+              ]
+            }
+          }
+        },
         "Blog": {
           "variants": {
             "EventBlog2": {
@@ -732,6 +889,34 @@
                 }
               ],
               "backgroundImage": "/breadcrumb.png"
+            },
+            "EventPageBannerTestimonials": {
+              "title": "Testimonial",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Testimonial",
+                  "href": "/testimonials"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "EventPageBannerOurPartners": {
+              "title": "Our Partners",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Our Partners",
+                  "href": "/our-partners"
+                }
+              ],
+              "backgroundImage": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
             }
           }
         },
@@ -1327,8 +1512,367 @@
               ]
             }
           }
+        },
+        "Contact": {
+          "variants": {
+            "EventContact1": {
+              "title": "Contact Us",
+              "subtitle": "GET IN TOUCH",
+              "info": [
+                {
+                  "icon": "PhoneCall",
+                  "title": "Phone",
+                  "details": "+1 (555) 222 333 999"
+                },
+                {
+                  "icon": "Mail",
+                  "title": "Email Address",
+                  "details": "hello@occasia.com"
+                },
+                {
+                  "icon": "MapPin",
+                  "title": "Our Address",
+                  "details": "2118, New York, UK."
+                }
+              ],
+              "form": {
+                "title": "Send Us A Message",
+                "subtitle": "GET IN TOUCH",
+                "highlightText": "A Message",
+                "description": "We'd love to hear from you! Fill out the form and our team will get back to you as soon as possible."
+              },
+              "map": {
+                "image": "map-image.png",
+                "address": "123 Celebration Avenue, Mumbai, Maharashtra 400001"
+              }
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "Gallery1": {
+              "photoGallery": {
+                "subtitle": "OUR GALLERY",
+                "titlePart1": "Moments We",
+                "titleHighlight": "Create, Memories",
+                "titlePart2": "We Cherish",
+                "categories": [
+                  "All Events",
+                  "Weddings",
+                  "Engagements",
+                  "Birthdays",
+                  "Corporate Events",
+                  "Private Parties"
+                ],
+                "photos": [
+                  {
+                    "id": "p1",
+                    "src": "/gallery/photo1.jpg",
+                    "alt": "Beach Wedding Setup",
+                    "category": "Weddings"
+                  },
+                  {
+                    "id": "p2",
+                    "src": "/gallery/photo2.jpg",
+                    "alt": "Dinner Table Setup",
+                    "category": "Corporate Events"
+                  },
+                  {
+                    "id": "p3",
+                    "src": "/gallery/photo3.jpg",
+                    "alt": "Night Event Stage",
+                    "category": "Engagements"
+                  },
+                  {
+                    "id": "p4",
+                    "src": "/gallery/photo4.jpg",
+                    "alt": "Indoor Stage Decor",
+                    "category": "Private Parties"
+                  },
+                  {
+                    "id": "p5",
+                    "src": "/gallery/photo5.jpg",
+                    "alt": "Garden Party Area",
+                    "category": "Birthdays"
+                  },
+                  {
+                    "id": "p6",
+                    "src": "/gallery/photo6.jpg",
+                    "alt": "Floral Backdrop",
+                    "category": "Weddings"
+                  },
+                  {
+                    "id": "p7",
+                    "src": "/gallery/photo7.jpg",
+                    "alt": "Long Dinner Table",
+                    "category": "Corporate Events"
+                  },
+                  {
+                    "id": "p8",
+                    "src": "/gallery/photo8.jpg",
+                    "alt": "Night Lights Decor",
+                    "category": "Engagements"
+                  },
+                  {
+                    "id": "p9",
+                    "src": "/gallery/photo9.jpg",
+                    "alt": "Stage Performance",
+                    "category": "Private Parties"
+                  },
+                  {
+                    "id": "p10",
+                    "src": "/gallery/photo10.jpg",
+                    "alt": "Birthday Cake Setup",
+                    "category": "Birthdays"
+                  },
+                  {
+                    "id": "p11",
+                    "src": "/gallery/photo11.jpg",
+                    "alt": "Outdoor Reception",
+                    "category": "Weddings"
+                  },
+                  {
+                    "id": "p12",
+                    "src": "/gallery/photo12.jpg",
+                    "alt": "Corporate Seminar",
+                    "category": "Corporate Events"
+                  }
+                ],
+                "loadMoreText": "Load More Photos"
+              },
+              "videoGallery": {
+                "subtitle": "OUR GALLERY",
+                "titlePart1": "Video",
+                "titleHighlight": "Gallery",
+                "videos": [
+                  {
+                    "id": "v1",
+                    "thumbnail": "/gallery/video1.jpg",
+                    "alt": "Party Concert",
+                    "videoUrl": "https://www.youtube.com/embed/0M3uF7qgG4w?autoplay=1"
+                  },
+                  {
+                    "id": "v2",
+                    "thumbnail": "/gallery/video2.jpg",
+                    "alt": "Wedding Venue",
+                    "videoUrl": "https://www.youtube.com/embed/0M3uF7qgG4w?autoplay=1"
+                  },
+                  {
+                    "id": "v3",
+                    "thumbnail": "/gallery/video3.jpg",
+                    "alt": "Stage Event",
+                    "videoUrl": "https://www.youtube.com/embed/0M3uF7qgG4w?autoplay=1"
+                  },
+                  {
+                    "id": "v4",
+                    "thumbnail": "/gallery/video4.jpg",
+                    "alt": "Dinner Gathering",
+                    "videoUrl": "https://www.youtube.com/embed/0M3uF7qgG4w?autoplay=1"
+                  }
+                ]
+              }
+            }
+          }
         }
       }
     }
+  },
+  "OurPartnersPage": {
+    "subtitle": "OUR PARTNERS",
+    "titlePart1": "Stronger Together,",
+    "titlePart2": "Creating",
+    "titleHighlight": "Unforgettable Experiences",
+    "description": "We are proud to collaborate with amazing partners who share our passion for excellence and dedication to delivering extraordinary events.",
+    "features": [
+      {
+        "id": 1,
+        "title": "Trusted Collaborations",
+        "description": "Working with the best in the industry",
+        "icon": "Handshake"
+      },
+      {
+        "id": 2,
+        "title": "Quality Assurance",
+        "description": "Committed to the highest standards",
+        "icon": "Award"
+      },
+      {
+        "id": 3,
+        "title": "Shared Vision",
+        "description": "Building memorable experiences together",
+        "icon": "Users"
+      },
+      {
+        "id": 4,
+        "title": "Exceptional Results",
+        "description": "Delivering success, every time",
+        "icon": "Trophy"
+      }
+    ],
+    "partnersHeading": "Our Esteemed Partners",
+    "partnersDescription": "We are privileged to be associated with leading brands and organizations who inspire us to innovate and excel.",
+    "partners": [
+      {
+        "id": 1,
+        "name": "Taj Hotels & Resorts",
+        "image": "/partners/taj-logo.png"
+      },
+      {
+        "id": 2,
+        "name": "The Leela",
+        "image": "/partners/leela-logo.png"
+      },
+      {
+        "id": 3,
+        "name": "ITC Hotels",
+        "image": "/partners/itc-logo.png"
+      },
+      {
+        "id": 4,
+        "name": "Novotel",
+        "image": "/partners/novotel-logo.png"
+      },
+      {
+        "id": 5,
+        "name": "Courtyard",
+        "image": "/partners/courtyard-logo.png"
+      },
+      {
+        "id": 6,
+        "name": "Hyatt",
+        "image": "/partners/hyatt-logo.png"
+      },
+      {
+        "id": 7,
+        "name": "JBL",
+        "image": "/partners/jbl-logo.png"
+      },
+      {
+        "id": 8,
+        "name": "Showcraft",
+        "image": "/partners/showcraft-logo.png"
+      },
+      {
+        "id": 9,
+        "name": "Wizcraft",
+        "image": "/partners/wizcraft-logo.png"
+      },
+      {
+        "id": 10,
+        "name": "Prestige Lighting",
+        "image": "/partners/prestige-logo.png"
+      },
+      {
+        "id": 11,
+        "name": "d'zine arts",
+        "image": "/partners/dzine-logo.png"
+      },
+      {
+        "id": 12,
+        "name": "Shreeji Decorators",
+        "image": "/partners/shreeji-logo.png"
+      }
+    ],
+    "stats": [
+      {
+        "id": 1,
+        "value": "70+",
+        "label": "Events Delivered",
+        "icon": "Calendar"
+      },
+      {
+        "id": 2,
+        "value": "20+",
+        "label": "Years of Experience",
+        "icon": "Award"
+      },
+      {
+        "id": 3,
+        "value": "10K+",
+        "label": "Happy Clients",
+        "icon": "Users"
+      },
+      {
+        "id": 4,
+        "value": "50+",
+        "label": "Trusted Partners",
+        "icon": "Handshake"
+      }
+    ]
+  },
+  "FAQPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Home / Frequently Asked Questions",
+    "image": "/faqpage.png",
+    "faqHeading": "General FAQ",
+    "faqTitlePart1": "General FAQs Based For Our",
+    "faqTitleHighlight": "Event Planning",
+    "faqTitlePart2": "Services.",
+    "faqButtonText": "Get Answered",
+    "faqDescription": "Find answers to the most common questions about our event planning services, booking process, and how we make your events unforgettable.",
+    "faqsLeft": [
+      {
+        "id": 1,
+        "question": "What Types Of Events Do You Plan?",
+        "answer": "We plan a wide range of events including weddings, birthday parties, engagements, anniversaries, corporate events, product launches, themed parties, exhibitions, and private celebrations."
+      },
+      {
+        "id": 2,
+        "question": "How Early Should I Book My Event?",
+        "answer": "We recommend booking at least 3-6 months in advance for larger events like weddings and corporate functions, and 1-2 months for smaller parties to ensure date availability and optimal planning time."
+      },
+      {
+        "id": 3,
+        "question": "Can You Help With Venue Selection?",
+        "answer": "Absolutely! We have strong relationships with top venues across the region and can help you find the perfect location that matches your vision, guest count, and budget."
+      },
+      {
+        "id": 4,
+        "question": "Do You Provide Decoration And Theme Setup?",
+        "answer": "Yes, we provide end-to-end decoration services including floral arrangements, lighting, props, and custom theme execution tailored to your specific preferences."
+      },
+      {
+        "id": 5,
+        "question": "What Is Included In Your Event Planning Package?",
+        "answer": "Our comprehensive packages typically include venue sourcing, decor styling, vendor management, on-day coordination, catering arrangements, and detailed itinerary planning."
+      },
+      {
+        "id": 6,
+        "question": "Do You Handle Catering And Entertainment?",
+        "answer": "Yes, we collaborate with premium caterers and top-tier entertainment professionals to provide a seamless and memorable experience for your guests."
+      }
+    ],
+    "faqsRight": [
+      {
+        "id": 7,
+        "question": "What Types Of Events Do You Plan?",
+        "answer": "We plan a wide range of events including weddings, birthday parties, engagements, anniversaries, corporate events, product launches, themed parties, exhibitions, and private celebrations."
+      },
+      {
+        "id": 8,
+        "question": "Can You Customize The Event As Per Our Requirements?",
+        "answer": "Yes, every event we plan is fully customized. We work closely with you to understand your specific needs, style, and cultural preferences to create a truly personalized experience."
+      },
+      {
+        "id": 9,
+        "question": "Do You Provide A Budget Estimate?",
+        "answer": "Yes, after our initial consultation, we provide a detailed, transparent budget estimate outlining all expected costs so you can make informed decisions without hidden surprises."
+      },
+      {
+        "id": 10,
+        "question": "How Do You Ensure Everything Runs Smoothly On The Event Day?",
+        "answer": "We provide a dedicated on-site coordination team that manages vendors, follows the timeline strictly, and handles any unexpected situations so you can relax and enjoy your event."
+      },
+      {
+        "id": 11,
+        "question": "What Is Your Cancellation Or Rescheduling Policy?",
+        "answer": "Our policies vary depending on the scale of the event and the vendors involved. We outline all cancellation and rescheduling terms clearly in our initial contract for full transparency."
+      },
+      {
+        "id": 12,
+        "question": "How Can I Get A Quote For My Event?",
+        "answer": "You can easily get a quote by contacting us through our website's contact form, calling our office, or emailing us directly. We'll set up a consultation to discuss your needs."
+      }
+    ]
   }
 }

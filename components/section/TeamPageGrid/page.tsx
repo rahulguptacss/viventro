@@ -38,8 +38,12 @@ export default function TeamPageGrid({ data }: TeamPageGridProps) {
             className="text-[36px] sm:text-[44px] md:text-[56px] font-bold leading-[1.1] text-[#0B1221] tracking-tight mb-3"
             style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
           >
-            Meet The Team Behind <br className="hidden sm:block" /> Your{" "}
-            <span className="text-[#C46814]">Perfect Event</span>
+            {data.title.split('Perfect Event').map((text, i, arr) => (
+              <span key={i}>
+                {text}
+                {i === 0 && arr.length > 1 && <span className="text-[#C46814]">Perfect Event</span>}
+              </span>
+            ))}
           </motion.h2>
           
           <motion.div

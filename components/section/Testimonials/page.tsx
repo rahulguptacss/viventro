@@ -51,7 +51,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                 <circle cx="14" cy="11" r="1.2" fill="#D4AF37"/>
               </svg>
               <span className="text-[13px] sm:text-[14px] font-bold tracking-[0.15em] text-[#D4AF37] uppercase mt-0.5">
-                WHAT OUR <span className="text-white">CLIENTS SAY</span>
+                {data.subtitle.split(' ').slice(0, 2).join(' ')} <span className="text-white">{data.subtitle.split(' ').slice(2).join(' ')}</span>
               </span>
             </motion.div>
 
@@ -62,18 +62,12 @@ export default function Testimonials({ data }: TestimonialsProps) {
               transition={{ delay: 0.1 }}
               className="text-[36px] sm:text-[46px] lg:text-[52px] xl:text-[60px] font-bold leading-[1.1] mb-6 tracking-tight max-w-2xl lg:pr-10"
             >
-              {data.title.includes('Celebrated.') ? (
-                <>
-                  Hear From Those <br className="hidden sm:block" /> We've <span className="text-[#D4AF37]">Celebrated.</span>
-                </>
-              ) : (
-                data.title.split('Celebrated.').map((text, i) => (
-                  <span key={i}>
-                    {text}
-                    {i === 0 && <span className="text-[#D4AF37]">Celebrated.</span>}
-                  </span>
-                ))
-              )}
+              {data.title.split('Celebrated.').map((text, i, arr) => (
+                <span key={i}>
+                  {text}
+                  {i === 0 && arr.length > 1 && <span className="text-[#D4AF37]">Celebrated.</span>}
+                </span>
+              ))}
             </motion.h2>
 
             <motion.p

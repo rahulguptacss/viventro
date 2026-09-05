@@ -15,10 +15,7 @@ interface AwardsAboutData {
 }
 
 export default function AwardsAbout({ data }: { data: AwardsAboutData }) {
-  // Split titles to apply colors to the first word and the rest (if desired)
-  const titleWords = data.title ? data.title.split(' ') : ["Awards", "&", "Achievements"];
-  const firstWord = titleWords[0];
-  const restWords = titleWords.slice(1).join(' ');
+
 
   return (
     <section className="bg-[#FAF9F6] py-8 md:py-12">
@@ -79,8 +76,8 @@ export default function AwardsAbout({ data }: { data: AwardsAboutData }) {
               className="text-[36px] sm:text-[44px] md:text-[58px] font-bold text-[#0B1221] mb-4 lg:mb-3 leading-[1.1] tracking-tight"
               style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
             >
-              Awards & <br className="hidden md:block" />
-              <span className="text-[#C46814]">Achievements</span>
+              {data.title.split(' ').slice(0, -1).join(' ')} <br className="hidden md:block" />
+              <span className="text-[#C46814]">{data.title.split(' ').slice(-1).join(' ')}</span>
             </motion.h2>
             
             {/* Description */}

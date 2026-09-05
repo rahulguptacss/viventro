@@ -51,7 +51,12 @@ export default function Blog({ data }: BlogProps) {
               viewport={{ once: true }}
               className="text-[36px] sm:text-[42px] lg:text-[48px] font-bold leading-[1.1] text-black tracking-tight"
             >
-              Explore The Latest Event Tips, <br className="hidden md:block"/> Trends & <span className="text-[#D4AF37]">Success Stories</span>
+              {data.title.split('Success Stories').map((text, i, arr) => (
+                <span key={i}>
+                  {text}
+                  {i === 0 && arr.length > 1 && <span className="text-[#D4AF37]">Success Stories</span>}
+                </span>
+              ))}
             </motion.h2>
 
             {/* Subtle Divider */}

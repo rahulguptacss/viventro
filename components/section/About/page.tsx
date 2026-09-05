@@ -59,8 +59,8 @@ export default function About({ data }: AboutProps) {
                     'var(--font-geist-sans), "Outfit", "Plus Jakarta Sans", sans-serif',
                 }}
               >
-                Turning Moments Into{" "}
-                <span className="text-[#B88E52]">Lasting Memories</span>
+                {data.title.split(' ').slice(0, -2).join(' ')}{" "}
+                <span className="text-[#B88E52]">{data.title.split(' ').slice(-2).join(' ')}</span>
               </motion.h2>
 
               {/* DESCRIPTION + BUTTON */}
@@ -72,11 +72,7 @@ export default function About({ data }: AboutProps) {
                 className="mt-1 flex w-[294px] shrink-0 flex-col items-end"
               >
                 <p className="text-right text-[16px] font-medium leading-[1.9] text-[#6b7280]">
-                  At Viventro, we don't just plan events,
-                  <br />
-                  we create unforgettable experiences
-                  <br />
-                  that stay with you forever.
+                  {data.description}
                 </p>
 
                 <Link
@@ -213,8 +209,8 @@ export default function About({ data }: AboutProps) {
                   'var(--font-geist-sans), "Outfit", "Plus Jakarta Sans", sans-serif',
               }}
             >
-              Turning Moments Into{" "}
-              <span className="text-[#B88E52]">Lasting Memories</span>
+              {data.title.split(' ').slice(0, -2).join(' ')}{" "}
+              <span className="text-[#B88E52]">{data.title.split(' ').slice(-2).join(' ')}</span>
             </h2>
 
             <div className="mt-2 flex items-center gap-3">
@@ -250,8 +246,7 @@ export default function About({ data }: AboutProps) {
             className="flex flex-col"
           >
             <p className="max-w-[600px] text-[14px] font-medium leading-[1.8] text-[#6b7280]">
-              At Viventro, we don't just plan events, we create unforgettable
-              experiences that stay with you forever.
+              {data.description}
             </p>
 
             <Link

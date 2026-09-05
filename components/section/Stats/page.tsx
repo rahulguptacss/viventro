@@ -14,6 +14,7 @@ interface StatsProps {
   data: {
     items: StatItem[];
   };
+  hideDualBackground?: boolean;
 }
 
 const statIconMap: Record<string, React.ReactNode> = {
@@ -43,14 +44,16 @@ function AnimatedCounter({ value }: { value: string }) {
   return <motion.span ref={ref}>{rounded}</motion.span>;
 }
 
-export default function Stats({ data }: StatsProps) {
+export default function Stats({ data, hideDualBackground }: StatsProps) {
   return (
     <section className="relative w-full">
       {/* Dual Background for overlap effect */}
-      <div className="absolute inset-0 z-0 flex flex-col">
-        <div className="h-1/2 bg-white"></div>
-        <div className="h-1/2 bg-[#050505]"></div>
-      </div>
+      {!hideDualBackground && (
+        <div className="absolute inset-0 z-0 flex flex-col">
+          <div className="h-1/2 bg-white"></div>
+          <div className="h-1/2 bg-[#050505]"></div>
+        </div>
+      )}
       
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="bg-[#1A1814] border border-[#D49A4D]/40 rounded-[20px] py-10 px-2 sm:px-6 md:px-8 grid grid-cols-2 gap-y-10 gap-x-2 md:flex md:flex-row md:justify-between items-center md:gap-0">

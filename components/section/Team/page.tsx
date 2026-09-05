@@ -48,18 +48,12 @@ export default function Team({ data }: TeamProps) {
               viewport={{ once: true }}
               className="text-[36px] sm:text-[42px] lg:text-[48px] font-bold leading-[1.1] text-black tracking-tight"
             >
-              {data.title.includes('Your Perfect Event') ? (
-                <>
-                  Meet The Team Behind <br className="hidden md:block" /> Your <span className="text-[#D4AF37]">Perfect Event</span>
-                </>
-              ) : (
-                data.title.split('Perfect Event').map((text, i) => (
-                  <span key={i}>
-                    {text}
-                    {i === 0 && <span className="text-[#D4AF37]">Perfect Event</span>}
-                  </span>
-                ))
-              )}
+              {data.title.split('Perfect Event').map((text, i, arr) => (
+                <span key={i}>
+                  {text}
+                  {i === 0 && arr.length > 1 && <span className="text-[#D4AF37]">Perfect Event</span>}
+                </span>
+              ))}
             </motion.h2>
 
             {/* Subtle Divider */}

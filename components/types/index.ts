@@ -60,12 +60,24 @@ export interface AboutData {
   };
 }
 
+export interface ServiceFeature {
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface ServiceItem {
   id: number;
   title: string;
   description: string;
   icon: string;
   image: string;
+  // Detail page fields
+  subtitle?: string;
+  detailedDescription?: string;
+  features?: ServiceFeature[];
+  whyChooseUs?: string[];
+  sidebarImage?: string;
 }
 
 export interface ServicesData {
@@ -153,6 +165,14 @@ export interface TestimonialsData {
   items: TestimonialItem[];
 }
 
+export interface TestimonialsPageGridData {
+  subtitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  items: TestimonialItem[];
+}
+
 export interface BlogItem {
   id: number;
   title: string;
@@ -205,9 +225,83 @@ export interface FooterData {
   };
 }
 
+export interface ContactInfo {
+  icon: string;
+  title: string;
+  details: string;
+}
+
+export interface ContactData {
+  title: string;
+  subtitle: string;
+  info: ContactInfo[];
+  form: {
+    title: string;
+    subtitle: string;
+    highlightText: string;
+    description: string;
+  };
+  map: {
+    image: string;
+    address: string;
+  };
+}
+
+export interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface FAQPageData {
+  title: string;
+  subtitle: string;
+  image: string;
+  faqHeading: string;
+  faqTitlePart1: string;
+  faqTitleHighlight: string;
+  faqTitlePart2: string;
+  faqButtonText: string;
+  faqDescription: string;
+  faqsLeft: FAQItem[];
+  faqsRight: FAQItem[];
+}
+
 export interface PageComponent {
   key: string;
   component: string;
+}
+
+export interface PhotoItem {
+  id: string;
+  src: string;
+  alt: string;
+  category: string;
+}
+
+export interface VideoItem {
+  id: string;
+  thumbnail: string;
+  alt: string;
+  videoUrl?: string;
+}
+
+export interface GalleryData {
+  photoGallery: {
+    subtitle: string;
+    titlePart1: string;
+    titleHighlight: string;
+    titlePart2: string;
+    categories: string[];
+    photos: PhotoItem[];
+    loadMoreText: string;
+  };
+  videoGallery: {
+    subtitle: string;
+    titlePart1: string;
+    titleHighlight: string;
+    videos: VideoItem[];
+  };
 }
 
 export interface EventTemplateData {
@@ -235,4 +329,37 @@ export interface EventTemplateData {
       };
     };
   };
+}
+
+export interface PartnerFeature {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface PartnerLogo {
+  id: number;
+  name: string;
+  image: string;
+}
+
+export interface PartnerStat {
+  id: number;
+  value: string;
+  label: string;
+  icon: string;
+}
+
+export interface OurPartnersPageData {
+  subtitle: string;
+  titlePart1: string;
+  titlePart2: string;
+  titleHighlight: string;
+  description: string;
+  features: PartnerFeature[];
+  partnersHeading: string;
+  partnersDescription: string;
+  partners: PartnerLogo[];
+  stats: PartnerStat[];
 }
