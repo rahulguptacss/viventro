@@ -15,8 +15,18 @@ export interface HeaderData {
   };
 }
 
+export interface HeroSlide {
+  image: string;
+  subtitle?: string;
+  title?: string;
+  titleHighlight?: string;
+  description?: string;
+  buttonText?: string;
+  buttonLink?: string;
+}
+
 export interface HeroData {
-  images: string[];
+  slides: HeroSlide[];
 }
 
 export interface PageBannerData {
@@ -51,6 +61,7 @@ export interface AboutData {
   title: string;
   description: string;
   buttonText: string;
+  buttonLink?: string;
   features: string[];
   images: string[];
   planner: {
@@ -85,6 +96,7 @@ export interface ServicesData {
   title: string;
   description: string;
   buttonText: string;
+  buttonLink?: string;
   items: ServiceItem[];
 }
 
@@ -120,6 +132,7 @@ export interface EventsData {
   title: string;
   description: string;
   buttonText: string;
+  buttonLink?: string;
   items: EventItem[];
 }
 
@@ -146,6 +159,7 @@ export interface TeamData {
   title: string;
   description: string;
   buttonText: string;
+  buttonLink?: string;
   members: TeamMember[];
 }
 
@@ -328,6 +342,56 @@ export interface GalleryData {
   };
 }
 
+export interface CareerDetailData {
+  id: number;
+  smallTitle: string;
+  title: string;
+  location: string;
+  type: string;
+  experience: string;
+  description: string;
+  image: string;
+  jobDescriptionTitle: string;
+  jobDescription: string;
+  responsibilitiesTitle: string;
+  responsibilities: string[];
+  requirementsTitle: string;
+  requirements: string[];
+  offerTitle: string;
+  offer: {
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+  whyUsTitle: string;
+  whyUs: string[];
+  formTitle: string;
+  formLabels: {
+    fullName: string;
+    email: string;
+    phone: string;
+    experience: string;
+    location: string;
+    resume: string;
+    coverLetter: string;
+    resumeDropText: string;
+    resumeHelpText: string;
+    termsLabel: string;
+    termsLink: string;
+    submitBtn: string;
+    securityText: string;
+  };
+  formPlaceholders: {
+    fullName: string;
+    email: string;
+    phone: string;
+    experienceSelect: string;
+    location: string;
+    coverLetter: string;
+  };
+  formExperienceOptions: string[];
+}
+
 export interface EventTemplateData {
   common: {
     Header: HeaderData;
@@ -386,4 +450,115 @@ export interface OurPartnersPageData {
   partnersDescription: string;
   partners: PartnerLogo[];
   stats: PartnerStat[];
+}
+
+export interface GetQuotePageData {
+  pageBanner: PageBannerData;
+  smallTitle: string;
+  titlePart1: string;
+  titleHighlight: string;
+  description: string;
+  image: string;
+  formTitle: string;
+  formLabels: {
+    fullName: string;
+    email: string;
+    phone: string;
+    eventType: string;
+    eventDate: string;
+    guestCount: string;
+    eventLocation: string;
+    eventDetails: string;
+    budgetRange: string;
+    budgetRangeOptionalText?: string;
+    termsLabel: string;
+    termsLink1: string;
+    termsAndText?: string;
+    termsLink2: string;
+    submitBtn: string;
+    securityText: string;
+  };
+  formPlaceholders: {
+    fullName: string;
+    email: string;
+    phone: string;
+    eventTypeSelect: string;
+    eventDate: string;
+    guestCount: string;
+    eventLocation: string;
+    eventDetails: string;
+    budgetRangeSelect: string;
+  };
+  eventTypeOptions: string[];
+  budgetRangeOptions: string[];
+}
+
+export interface PrivacyPolicyItem {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface PrivacyPolicyPageData {
+  pageBanner: PageBannerData;
+  hero: {
+    smallTitle: string;
+    titlePart1: string;
+    titleHighlight: string;
+    description: string;
+    image: string;
+    heroBadgeText: string;
+    imageBadgeTitle: string;
+    imageBadgeSubtext: string;
+  };
+  sidebar: {
+    title: string;
+    description: string;
+  };
+  policies: PrivacyPolicyItem[];
+  helpSection: {
+    titlePart1: string;
+    titleHighlight: string;
+    description: string;
+    contactInfo: {
+      call:  { label: string; number: string; timing: string };
+      email: { label: string; address: string; response: string };
+      visit: { label: string; address: string };
+    };
+    footerText: string;
+  };
+}
+
+// All 4 new policy pages share the exact same data shape as PrivacyPolicyPageData
+export type CookiePolicyPageData   = PrivacyPolicyPageData;
+export type RefundPolicyPageData   = PrivacyPolicyPageData;
+export type DisclaimerPageData     = PrivacyPolicyPageData;
+export type TermsPageData          = PrivacyPolicyPageData;
+
+export interface NotFoundPageData {
+  backgroundImage: string;
+  errorCode: string;
+  title: string;
+  primaryButton: {
+    label: string;
+    href: string;
+  };
+  secondaryButton: {
+    label: string;
+    href: string;
+  };
+}
+
+export interface SitemapSectionData {
+  title: string;
+  icon: string;
+  links: {
+    label: string;
+    href: string;
+  }[];
+}
+
+export interface SitemapPageData {
+  pageBanner: PageBannerData;
+  sections: SitemapSectionData[];
 }

@@ -56,14 +56,26 @@ export default function GlobalLayout({ children, headerData, footerData, banners
         ]
       };
     } else if (baseRoute === 'career') {
-      currentBanner = {
-        ...currentBanner,
-        title: "Career",
-        breadcrumbs: [
-          { label: "Home", href: "/" },
-          { label: "Career", href: "#" }
-        ]
-      };
+      if (currentRoute !== 'career') {
+        currentBanner = {
+          ...currentBanner,
+          title: "Career Detail",
+          breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "Career", href: "/career" },
+            { label: "Career Detail", href: "#" }
+          ]
+        };
+      } else {
+        currentBanner = {
+          ...currentBanner,
+          title: "Career",
+          breadcrumbs: [
+            { label: "Home", href: "/" },
+            { label: "Career", href: "#" }
+          ]
+        };
+      }
     } else if (baseRoute === 'blog' && currentRoute !== 'blog') {
       currentBanner = {
         ...currentBanner,

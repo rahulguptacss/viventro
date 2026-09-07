@@ -36,6 +36,7 @@ interface EventsProps {
     title: string;
     description: string;
     buttonText: string;
+    buttonLink?: string;
     items: EventItem[];
   };
   theme?: 'dark' | 'light';
@@ -108,7 +109,7 @@ export default function UpcomingEvents({ data, theme = 'dark', hideHeaderButton 
             {!hideHeaderButton && (
               <div>
                 <Link 
-                  href="#" 
+                  href={data.buttonLink || "#"} 
                   className="group shrink-0 inline-flex items-center gap-4 bg-[#D4AF37] hover:bg-[#bd853e] py-2 pl-8 pr-2.5 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black text-[16px] shadow-[0_0_25px_rgba(212,175,55,0.25)] hover:shadow-[0_0_35px_rgba(212,175,55,0.4)]"
                 >
                   <span>{data.buttonText}</span>

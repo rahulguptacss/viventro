@@ -22,6 +22,7 @@ interface BlogProps {
     titleHighlight?: string;
     description: string;
     buttonText: string;
+    buttonLink?: string;
     readMoreText?: string;
     items: BlogItem[];
   };
@@ -90,7 +91,7 @@ export default function Blog({ data, limit, showButton = true }: BlogProps) {
             {showButton && (
               <div>
                 <Link 
-                  href="/blog" 
+                  href={data.buttonLink || "/blogs"} 
                   className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#b5952f] text-white pl-6 pr-1.5 py-1.5 rounded-[30px] font-bold transition-colors text-[15px] group shadow-lg shadow-[#D4AF37]/20"
                 >
                   {data.buttonText}

@@ -16,8 +16,20 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
   
   const currentEvent = allEvents.find((s: EventItem) => s.id.toString() === resolvedParams.id) || allEvents[0];
 
+  const baseBannerData = sections.PageBanner?.variants?.EventPageBanner2;
+  const bannerData = baseBannerData ? {
+    ...baseBannerData,
+    title: currentEvent.title,
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Events", href: "/events" },
+      { label: currentEvent.title, href: "#" }
+    ]
+  } : undefined;
+
   return (
     <main>
+      {bannerData && <PageBanner data={bannerData} />}
       {currentEvent && <EventDetail data={currentEvent} />}
     </main>
   );

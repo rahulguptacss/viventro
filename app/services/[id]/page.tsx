@@ -16,8 +16,20 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   
   const currentService = allServices.find((s: ServiceItem) => s.id.toString() === resolvedParams.id) || allServices[0];
 
+  const baseBannerData = sections.PageBanner?.variants?.EventPageBanner2;
+  const bannerData = baseBannerData ? {
+    ...baseBannerData,
+    title: currentService.title,
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "Services", href: "/services" },
+      { label: currentService.title, href: "#" }
+    ]
+  } : undefined;
+
   return (
     <main>
+      {bannerData && <PageBanner data={bannerData} />}
       {currentService && <ServiceDetail data={currentService} allServices={allServices} />}
     </main>
   );

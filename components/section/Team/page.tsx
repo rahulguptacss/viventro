@@ -18,6 +18,7 @@ interface TeamProps {
     title: string;
     description: string;
     buttonText: string;
+    buttonLink?: string;
     members: TeamMember[];
   };
 }
@@ -81,7 +82,7 @@ export default function Team({ data }: TeamProps) {
             </p>
             <div>
               <Link
-                href="#"
+                href={data.buttonLink || "#"}
                 className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#b5952f] text-white pl-6 pr-1.5 py-1.5 rounded-[30px] font-bold transition-colors text-[15px] group shadow-lg shadow-[#D4AF37]/20"
               >
                 {data.buttonText}
@@ -96,27 +97,28 @@ export default function Team({ data }: TeamProps) {
         {/* Team Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {data.members.map((member, index) => (
-            <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] group hover:-translate-y-2 transition-all duration-500"
-            >
-              <div className="relative h-[320px] lg:h-[340px] w-full overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-6 text-left">
-                <h3 className="text-[22px] font-bold text-[#0A1128] mb-1.5 tracking-tight">{member.name}</h3>
-                <p className="text-[#C68A3C] text-[15px] font-semibold">{member.role}</p>
-              </div>
-            </motion.div>
+            <Link href={`/our-team/${member.id}`} key={member.id} className="block h-full cursor-pointer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] group hover:-translate-y-2 transition-all duration-500 h-full"
+              >
+                <div className="relative h-[320px] lg:h-[340px] w-full overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 text-left">
+                  <h3 className="text-[22px] font-bold text-[#0A1128] mb-1.5 tracking-tight">{member.name}</h3>
+                  <p className="text-[#C68A3C] text-[15px] font-semibold">{member.role}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

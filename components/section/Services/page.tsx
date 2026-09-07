@@ -22,6 +22,7 @@ interface ServicesProps {
     title: string;
     description: string;
     buttonText: string;
+    buttonLink?: string;
     items: ServiceItem[];
   };
   theme?: 'dark' | 'light';
@@ -91,7 +92,7 @@ export default function Services({ data, theme = 'dark' }: ServicesProps) {
               {data.description}
             </p>
             <Link
-              href="#"
+              href={data.buttonLink || "#"}
               className="group shrink-0 inline-flex items-center gap-4 bg-[#D49A4D] hover:bg-[#bd853e] py-2 pl-8 pr-2.5 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black text-[16px] shadow-[0_0_25px_rgba(212,154,77,0.25)]"
             >
               <span>{data.buttonText}</span>

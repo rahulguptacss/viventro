@@ -49,6 +49,33 @@
           "href": "#",
           "subItems": [
             {
+              "label": "Policies",
+              "href": "#",
+              "icon": "Shield",
+              "subItems": [
+                {
+                  "label": "Cookie Policy",
+                  "href": "/cookie-policy"
+                },
+                {
+                  "label": "Refund Policy",
+                  "href": "/refund-policy"
+                },
+                {
+                  "label": "Disclaimer",
+                  "href": "/disclaimer"
+                },
+                {
+                  "label": "Terms & Conditions",
+                  "href": "/terms-and-conditions"
+                },
+                {
+                  "label": "Privacy Policy",
+                  "href": "/privacy-policy"
+                }
+              ]
+            },
+            {
               "label": "Awards & Achievements",
               "href": "/awards",
               "icon": "Award"
@@ -82,6 +109,11 @@
               "label": "Career",
               "href": "/career",
               "icon": "Briefcase"
+            },
+            {
+              "label": "Sitemap",
+              "href": "/sitemap",
+              "icon": "Map"
             }
           ],
           "icon": "ClipboardList"
@@ -97,7 +129,7 @@
       ],
       "button": {
         "label": "Get A Quote",
-        "href": "#"
+        "href": "/get-a-quote"
       }
     },
     "Footer": {
@@ -359,10 +391,34 @@
         "Hero": {
           "variants": {
             "EventHero2": {
-              "images": [
-                "/hero-slider/1.jpg",
-                "/hero-slider/2.jpg",
-                "/hero-slider/3.jpg"
+              "slides": [
+                {
+                  "image": "/hero-slider/1.jpg",
+                  "subtitle": "CRAFTING MOMENTS",
+                  "title": "Events That Feel",
+                  "titleHighlight": "Extraordinary",
+                  "description": "From intimate gatherings to grand celebrations, we plan, design and deliver experiences that stay with you forever.",
+                  "buttonText": "Plan Your Event",
+                  "buttonLink": "/get-a-quote"
+                },
+                {
+                  "image": "/hero-slider/2.jpg",
+                  "subtitle": "FLAWLESS EXECUTION",
+                  "title": "Designing Your",
+                  "titleHighlight": "Dream Event",
+                  "description": "Every detail matters. We bring your vision to life with precision, creativity, and unparalleled dedication to perfection.",
+                  "buttonText": "Explore Services",
+                  "buttonLink": "/services"
+                },
+                {
+                  "image": "/hero-slider/wedding.png",
+                  "subtitle": "UNFORGETTABLE EXPERIENCES",
+                  "title": "Memories To Last",
+                  "titleHighlight": "A Lifetime",
+                  "description": "Step into a world of elegance and joy. Let us create a breathtaking atmosphere for your most cherished moments.",
+                  "buttonText": "View Gallery",
+                  "buttonLink": "/gallery"
+                }
               ]
             }
           }
@@ -374,6 +430,7 @@
               "title": "Turning Moments Into Lasting Memories",
               "description": "At Viventro, we don't just plan events, we create unforgettable experiences that stay with you forever.",
               "buttonText": "More About Us",
+              "buttonLink": "/about-us",
               "features": [
                 "Expert Event Planning Solutions",
                 "Creative Event Design Services",
@@ -398,6 +455,7 @@
               "title": "Explore Our Full Range of Event Solutions",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
               "buttonText": "Explore Our Services",
+              "buttonLink": "/services",
               "items": [
                 {
                   "id": 1,
@@ -825,6 +883,7 @@
               "title": "Discover Memorable And Exciting Events Near You",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
               "buttonText": "Event Details",
+              "buttonLink": "/events",
               "items": [
                 {
                   "id": 1,
@@ -876,6 +935,7 @@
               "title": "Meet The Team Behind Your Perfect Event",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
               "buttonText": "View More",
+              "buttonLink": "/our-team",
               "members": [
                 {
                   "id": 1,
@@ -1028,6 +1088,7 @@
               "titleHighlight": "Success Stories",
               "description": "Stay inspired with expert tips, trending ideas and real event stories that create impact.",
               "buttonText": "View More",
+              "buttonLink": "/blogs",
               "readMoreText": "Read More",
               "sidebar": {
                 "recentPostsTitle": "Recent Posts",
@@ -2336,6 +2397,100 @@
               ]
             }
           }
+        },
+        "CareerDetail": {
+          "variants": {
+            "CareerDetail1": {
+              "id": 1,
+              "smallTitle": "CREATE. PLAN. CELEBRATE.",
+              "title": "Event Planner",
+              "location": "Mumbai, Maharashtra",
+              "type": "Full Time",
+              "experience": "2-4 Years Experience",
+              "description": "We are looking for a creative and organized Event Planner to join our dynamic team at Viventro. You will be responsible for planning and executing unforgettable events that leave a lasting impression on our clients and their guests.",
+              "image": "/careercover.png",
+              "jobDescription": "As an Event Planner, you will manage events from concept to completion while ensuring every detail aligns with our client's vision and expectations.",
+              "responsibilities": [
+                "Understand client requirements and propose creative event concepts.",
+                "Plan and coordinate all elements of events including venue, décor, catering, entertainment, and logistics.",
+                "Manage budgets, timelines, and resources efficiently.",
+                "Build and maintain strong relationships with vendors and partners.",
+                "Oversee event setup, execution, and post-event evaluation.",
+                "Ensure high levels of client satisfaction and flawless event delivery."
+              ],
+              "requirements": [
+                "2-4 years of experience in event planning or related field.",
+                "Excellent communication, negotiation, and organizational skills.",
+                "Creative mindset with strong attention to detail.",
+                "Ability to manage multiple events and meet deadlines.",
+                "Willingness to work flexible hours including weekends and holidays.",
+                "Bachelor's degree in Event Management, Hospitality, or any related field (preferred)."
+              ],
+              "offer": [
+                {
+                  "title": "Growth Opportunities",
+                  "description": "Learn, grow and advance your career with us.",
+                  "icon": "user"
+                },
+                {
+                  "title": "Competitive Salary",
+                  "description": "Attractive compensation along with performance incentives.",
+                  "icon": "salary"
+                },
+                {
+                  "title": "Supportive Team",
+                  "description": "Work with passionate people who inspire excellence.",
+                  "icon": "team"
+                },
+                {
+                  "title": "Work-Life Balance",
+                  "description": "We value your time and believe in a healthy balance.",
+                  "icon": "balance"
+                }
+              ],
+              "whyUs": [
+                "Be part of India's leading event management company.",
+                "Work on diverse and exciting events across the country.",
+                "Get opportunities to learn from industry leaders.",
+                "A place where your ideas are valued and celebrated."
+              ],
+              "jobDescriptionTitle": "Job Description",
+              "responsibilitiesTitle": "Key Responsibilities",
+              "requirementsTitle": "Requirements",
+              "offerTitle": "What We Offer",
+              "formTitle": "Apply For This Position",
+              "whyUsTitle": "Why Build Your Career <br className='hidden sm:block' /> With Viventro?",
+              "formLabels": {
+                "fullName": "Full Name",
+                "email": "Email Address",
+                "phone": "Phone Number",
+                "experience": "Experience (Years)",
+                "location": "Current Location",
+                "resume": "Resume / CV",
+                "coverLetter": "Cover Letter",
+                "resumeDropText": "Click to upload or drag and drop",
+                "resumeHelpText": "PDF, DOC, DOCX (Max. 5MB)",
+                "termsLabel": "I agree to the privacy policy and",
+                "termsLink": "terms of service",
+                "submitBtn": "Submit Application",
+                "securityText": "Your information is safe with us."
+              },
+              "formPlaceholders": {
+                "fullName": "Enter your full name",
+                "email": "Enter your email",
+                "phone": "Enter your phone number",
+                "experienceSelect": "Select your experience",
+                "location": "Enter your current location",
+                "coverLetter": "Write a few lines about yourself..."
+              },
+              "formExperienceOptions": [
+                "Fresher",
+                "1-2 Years",
+                "3-5 Years",
+                "5+ Years"
+              ]
+            }
+          }
         }
       }
     }
@@ -2535,6 +2690,608 @@
         "id": 12,
         "question": "How Can I Get A Quote For My Event?",
         "answer": "You can easily get a quote by contacting us through our website's contact form, calling our office, or emailing us directly. We'll set up a consultation to discuss your needs."
+      }
+    ]
+  },
+  "GetQuotePage": {
+    "pageBanner": {
+      "title": "Get A Quote",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Get A Quote", "href": "/get-a-quote" }
+      ],
+      "backgroundImage": "/breadcrumb.png"
+    },
+    "smallTitle": "LET'S PLAN SOMETHING EXTRAORDINARY",
+    "titlePart1": "Get A Quote For",
+    "titleHighlight": "Your Dream Event",
+    "description": "Share your event details with us and our team at Viventro will get back to you with a customized proposal tailored to your needs.",
+    "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "formTitle": "Tell Us About Your Event",
+    "formLabels": {
+      "fullName": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "eventType": "Event Type",
+      "eventDate": "Event Date",
+      "guestCount": "Expected Guest Count",
+      "eventLocation": "Event Location",
+      "eventDetails": "Tell Us About Your Event",
+      "budgetRange": "Budget Range",
+      "budgetRangeOptionalText": "(Optional)",
+      "termsLabel": "I agree to the",
+      "termsLink1": "privacy policy",
+      "termsAndText": "and",
+      "termsLink2": "terms of service",
+      "submitBtn": "Submit Your Request",
+      "securityText": "We respect your privacy. Your information is safe with us."
+    },
+    "formPlaceholders": {
+      "fullName": "Enter your full name",
+      "email": "Enter your email",
+      "phone": "Enter your phone number",
+      "eventTypeSelect": "Select event type",
+      "eventDate": "Select event date",
+      "guestCount": "Approximate guests",
+      "eventLocation": "Enter event venue or city",
+      "eventDetails": "Share your requirements, preferences, theme, and any special requests...",
+      "budgetRangeSelect": "Select your budget range"
+    },
+    "eventTypeOptions": [
+      "Wedding & Engagement",
+      "Corporate Event",
+      "Birthday Party",
+      "Live Show & Concert",
+      "Other"
+    ],
+    "budgetRangeOptions": [
+      "Less than $1,000",
+      "$1,000 - $5,000",
+      "$5,000 - $10,000",
+      "More than $10,000"
+    ]
+  },
+  "PrivacyPolicyPage": {
+    "pageBanner": {
+      "title": "Privacy Policy",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Privacy Policy", "href": "/privacy-policy" }
+      ],
+      "backgroundImage": "/breadcrumb.png"
+    },
+    "hero": {
+      "smallTitle": "OUR COMMITMENT",
+      "titlePart1": "Privacy Policy",
+      "titleHighlight": "At Viventro",
+      "description": "At Viventro, your privacy is important to us. This Privacy Policy explains how we collect, use, protect, and disclose your information when you use our website and services.",
+      "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "heroBadgeText": "Your data is always protected",
+      "imageBadgeTitle": "Privacy Protected",
+      "imageBadgeSubtext": "100% Secure & Confidential"
+    },
+    "sidebar": {
+      "title": "Your Privacy, Our Priority",
+      "description": "We are committed to protecting your personal information and ensuring a safe and secure experience with Viventro."
+    },
+    "policies": [
+      {
+        "id": "01",
+        "title": "Information We Collect",
+        "description": "We collect personal information such as your name, email address, phone number, event details, and any other information you provide through our website or forms."
+      },
+      {
+        "id": "02",
+        "title": "How We Use Your Information",
+        "description": "We use your information to understand your requirements, provide our services, communicate with you, send updates, and improve our offerings."
+      },
+      {
+        "id": "03",
+        "title": "Information Sharing",
+        "description": "We do not sell or rent your personal information. We may share your data with trusted service providers who assist us in operating our website and delivering our services, under strict confidentiality."
+      },
+      {
+        "id": "04",
+        "title": "Data Security",
+        "description": "We implement a variety of security measures to maintain the safety of your personal information. Your data is stored on secure servers and is accessible only to authorized personnel."
+      },
+      {
+        "id": "05",
+        "title": "Cookies",
+        "description": "Our website uses cookies to enhance your browsing experience. You can choose to disable cookies in your browser settings at any time."
+      },
+      {
+        "id": "06",
+        "title": "Your Rights",
+        "description": "You have the right to access, update, or delete your personal information. You can contact us anytime to make a request."
+      },
+      {
+        "id": "07",
+        "title": "Changes To This Policy",
+        "description": "Viventro may update this Privacy Policy from time to time. We encourage you to review this page periodically for any changes."
+      },
+      {
+        "id": "08",
+        "title": "Contact Us",
+        "description": "If you have any questions or concerns about this Privacy Policy, feel free to contact us."
+      }
+    ],
+    "helpSection": {
+      "titlePart1": "Have Questions?",
+      "titleHighlight": "We're Here To Help!",
+      "description": "Reach out to our team for any privacy-related questions or assistance.",
+      "contactInfo": {
+        "call": {
+          "label": "Call Us",
+          "number": "+1 123 456 7890",
+          "timing": "Mon - Sat (10:00 AM - 7:00 PM)"
+        },
+        "email": {
+          "label": "Email Us",
+          "address": "hello@viventro.com",
+          "response": "We reply within 24 hours"
+        },
+        "visit": {
+          "label": "Visit Us",
+          "address": "123 Celebration Avenue, Mumbai, Maharashtra 400001 India"
+        }
+      },
+      "footerText": "By using our website and services, you agree to the terms outlined in this Privacy Policy. Thank you for trusting Viventro for your special celebrations."
+    }
+  },
+
+  "CookiePolicyPage": {
+    "pageBanner": {
+      "title": "Cookie Policy",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Cookie Policy", "href": "/cookie-policy" }
+      ],
+      "backgroundImage": "/breadcrumb.png"
+    },
+    "hero": {
+      "smallTitle": "TRANSPARENCY FIRST",
+      "titlePart1": "Cookie",
+      "titleHighlight": "Policy",
+      "description": "We use cookies to improve your browsing experience and analyse site traffic. This policy explains what cookies we use, why we use them, and how you can control them.",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "heroBadgeText": "You control your cookie preferences",
+      "imageBadgeTitle": "Cookie Transparency",
+      "imageBadgeSubtext": "Full control in your hands"
+    },
+    "sidebar": {
+      "title": "Your Preferences, Our Respect",
+      "description": "We believe in full transparency. You can manage or withdraw your cookie consent at any time through your browser settings."
+    },
+    "policies": [
+      {
+        "id": "01",
+        "title": "What Are Cookies?",
+        "description": "Cookies are small text files placed on your device when you visit our website. They help us remember your preferences and improve your experience on subsequent visits."
+      },
+      {
+        "id": "02",
+        "title": "Types of Cookies We Use",
+        "description": "We use essential cookies (required for the site to function), performance cookies (to analyse traffic), and functional cookies (to remember your preferences and settings)."
+      },
+      {
+        "id": "03",
+        "title": "Essential Cookies",
+        "description": "These cookies are necessary for the website to function and cannot be switched off. They are usually set in response to actions you take such as logging in or filling out forms."
+      },
+      {
+        "id": "04",
+        "title": "Analytics & Performance Cookies",
+        "description": "These cookies allow us to count visits and traffic sources so we can measure and improve our site's performance. All data collected is aggregated and anonymous."
+      },
+      {
+        "id": "05",
+        "title": "How to Manage Cookies",
+        "description": "You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. Disabling cookies may affect some features of our website."
+      },
+      {
+        "id": "06",
+        "title": "Third-Party Cookies",
+        "description": "In some special cases we also use cookies provided by trusted third parties such as Google Analytics to help us understand how you use our site."
+      },
+      {
+        "id": "07",
+        "title": "Cookie Retention",
+        "description": "Session cookies expire when you close your browser. Persistent cookies remain on your device for the period specified in the cookie or until you delete them manually."
+      },
+      {
+        "id": "08",
+        "title": "Updates to This Policy",
+        "description": "We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date."
+      }
+    ],
+    "helpSection": {
+      "titlePart1": "Cookie Questions?",
+      "titleHighlight": "We'll Help You!",
+      "description": "Reach out if you need assistance managing your cookie settings or have questions about our cookie practices.",
+      "contactInfo": {
+        "call": {
+          "label": "Call Us",
+          "number": "+1 123 456 7890",
+          "timing": "Mon - Sat (10:00 AM - 7:00 PM)"
+        },
+        "email": {
+          "label": "Email Us",
+          "address": "hello@viventro.com",
+          "response": "We reply within 24 hours"
+        },
+        "visit": {
+          "label": "Visit Us",
+          "address": "123 Celebration Avenue, Mumbai, Maharashtra 400001 India"
+        }
+      },
+      "footerText": "By continuing to use our website, you consent to our use of cookies as described in this Cookie Policy. Thank you for trusting Viventro."
+    }
+  },
+
+  "RefundPolicyPage": {
+    "pageBanner": {
+      "title": "Refund & Cancellation Policy",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Refund Policy", "href": "/refund-policy" }
+      ],
+      "backgroundImage": "/breadcrumb.png"
+    },
+    "hero": {
+      "smallTitle": "FAIR & TRANSPARENT",
+      "titlePart1": "Refund &",
+      "titleHighlight": "Cancellation Policy",
+      "description": "We understand that plans can change. Our refund and cancellation policy is designed to be fair and transparent, ensuring you always know where you stand.",
+      "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "heroBadgeText": "Fair & hassle-free refund process",
+      "imageBadgeTitle": "Refund Assured",
+      "imageBadgeSubtext": "Transparent cancellation terms"
+    },
+    "sidebar": {
+      "title": "We Value Your Trust",
+      "description": "Our goal is to make every interaction with Viventro straightforward and stress-free, including our refund and cancellation process."
+    },
+    "policies": [
+      {
+        "id": "01",
+        "title": "Cancellation by Client",
+        "description": "If you wish to cancel your event booking, please notify us in writing at least 30 days before the event date. Cancellations made 30+ days prior are eligible for a 70% refund of the total amount paid."
+      },
+      {
+        "id": "02",
+        "title": "Cancellations Within 15–29 Days",
+        "description": "Cancellations made between 15 and 29 days before the event date are eligible for a 40% refund. The remaining 60% will be retained to cover preparation and vendor commitment costs."
+      },
+      {
+        "id": "03",
+        "title": "Cancellations Within 14 Days",
+        "description": "Cancellations made within 14 days of the event date are non-refundable. At this stage, significant resources and third-party commitments have already been made on your behalf."
+      },
+      {
+        "id": "04",
+        "title": "Cancellation by Viventro",
+        "description": "In the unlikely event that Viventro must cancel your booking due to unforeseen circumstances, you will receive a full 100% refund or the option to reschedule at no additional charge."
+      },
+      {
+        "id": "05",
+        "title": "Rescheduling Policy",
+        "description": "You may reschedule your event once at no additional fee, provided you notify us at least 21 days in advance. Subsequent reschedules may incur an administrative fee of 10%."
+      },
+      {
+        "id": "06",
+        "title": "Refund Processing Time",
+        "description": "Approved refunds will be processed within 7–10 business days. Refunds will be credited to the original payment method used at the time of booking."
+      },
+      {
+        "id": "07",
+        "title": "Non-Refundable Services",
+        "description": "Certain customised or third-party services such as venue décor, entertainment bookings, and catering deposits may be non-refundable as per individual vendor agreements."
+      },
+      {
+        "id": "08",
+        "title": "Force Majeure",
+        "description": "In case of force majeure events (natural disasters, government restrictions, pandemics), Viventro will work with clients to reschedule events or offer partial credits on a case-by-case basis."
+      }
+    ],
+    "helpSection": {
+      "titlePart1": "Need Help With",
+      "titleHighlight": "Cancellations?",
+      "description": "Contact our support team for any refund or cancellation queries. We're committed to resolving all issues promptly and fairly.",
+      "contactInfo": {
+        "call": {
+          "label": "Call Us",
+          "number": "+1 123 456 7890",
+          "timing": "Mon - Sat (10:00 AM - 7:00 PM)"
+        },
+        "email": {
+          "label": "Email Us",
+          "address": "hello@viventro.com",
+          "response": "We reply within 24 hours"
+        },
+        "visit": {
+          "label": "Visit Us",
+          "address": "123 Celebration Avenue, Mumbai, Maharashtra 400001 India"
+        }
+      },
+      "footerText": "This Refund & Cancellation Policy is subject to change. We encourage you to review it before making any bookings. Thank you for choosing Viventro."
+    }
+  },
+
+  "DisclaimerPage": {
+    "pageBanner": {
+      "title": "Disclaimer",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Disclaimer", "href": "/disclaimer" }
+      ],
+      "backgroundImage": "/breadcrumb.png"
+    },
+    "hero": {
+      "smallTitle": "IMPORTANT NOTICE",
+      "titlePart1": "Our",
+      "titleHighlight": "Disclaimer",
+      "description": "The information provided on Viventro's website is for general informational purposes only. Please read this disclaimer carefully before relying on any content presented here.",
+      "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "heroBadgeText": "Accurate and up-to-date information",
+      "imageBadgeTitle": "Legal Notice",
+      "imageBadgeSubtext": "Please read carefully"
+    },
+    "sidebar": {
+      "title": "Accuracy Is Our Priority",
+      "description": "While we strive to keep all information accurate and current, Viventro makes no warranties of any kind regarding the completeness or reliability of this website's content."
+    },
+    "policies": [
+      {
+        "id": "01",
+        "title": "General Information Only",
+        "description": "The content on this website is provided for general information purposes only. It does not constitute professional advice of any kind, including legal, financial, or event-specific guidance."
+      },
+      {
+        "id": "02",
+        "title": "No Warranties",
+        "description": "Viventro makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the website or its content."
+      },
+      {
+        "id": "03",
+        "title": "Limitation of Liability",
+        "description": "In no event shall Viventro be liable for any loss or damage including without limitation, indirect or consequential loss or damage, arising from use of this website."
+      },
+      {
+        "id": "04",
+        "title": "External Links",
+        "description": "Our website may contain links to third-party websites. These links are provided for your convenience and do not signify our endorsement of those websites or their content."
+      },
+      {
+        "id": "05",
+        "title": "Event Information Accuracy",
+        "description": "While we strive to keep event details, pricing, and availability up to date, Viventro reserves the right to modify event details at any time without prior notice."
+      },
+      {
+        "id": "06",
+        "title": "Images & Media",
+        "description": "Images and media used on this website are for illustrative purposes only. Actual event setups, venues, and decorations may vary based on specific requirements and location."
+      },
+      {
+        "id": "07",
+        "title": "Professional Advice",
+        "description": "For specific advice tailored to your situation, we recommend consulting with a qualified professional. Viventro's content should not be used as a substitute for professional consultation."
+      },
+      {
+        "id": "08",
+        "title": "Changes to Disclaimer",
+        "description": "Viventro reserves the right to modify this disclaimer at any time. Your continued use of this website following any changes constitutes your acceptance of the updated disclaimer."
+      }
+    ],
+    "helpSection": {
+      "titlePart1": "Have Concerns?",
+      "titleHighlight": "Contact Us Today!",
+      "description": "If you have any questions or concerns about our disclaimer or the content on our website, please don't hesitate to reach out.",
+      "contactInfo": {
+        "call": {
+          "label": "Call Us",
+          "number": "+1 123 456 7890",
+          "timing": "Mon - Sat (10:00 AM - 7:00 PM)"
+        },
+        "email": {
+          "label": "Email Us",
+          "address": "hello@viventro.com",
+          "response": "We reply within 24 hours"
+        },
+        "visit": {
+          "label": "Visit Us",
+          "address": "123 Celebration Avenue, Mumbai, Maharashtra 400001 India"
+        }
+      },
+      "footerText": "By using the Viventro website, you acknowledge that you have read and understood this disclaimer. Thank you for your understanding."
+    }
+  },
+
+  "TermsPage": {
+    "pageBanner": {
+      "title": "Terms & Conditions",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Terms & Conditions", "href": "/terms-and-conditions" }
+      ],
+      "backgroundImage": "/breadcrumb.png"
+    },
+    "hero": {
+      "smallTitle": "LEGAL AGREEMENT",
+      "titlePart1": "Terms &",
+      "titleHighlight": "Conditions",
+      "description": "Please read these Terms & Conditions carefully before using Viventro's services. By accessing our website or booking our services, you agree to be bound by these terms.",
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "heroBadgeText": "Clear and fair terms for all",
+      "imageBadgeTitle": "Legal Agreement",
+      "imageBadgeSubtext": "Protecting both parties"
+    },
+    "sidebar": {
+      "title": "Your Agreement Matters",
+      "description": "By using Viventro's website and services, you confirm that you have read, understood, and agreed to these Terms & Conditions in full."
+    },
+    "policies": [
+      {
+        "id": "01",
+        "title": "Acceptance of Terms",
+        "description": "By accessing and using Viventro's website and services, you accept and agree to be bound by these Terms & Conditions. If you do not agree to these terms, please do not use our services."
+      },
+      {
+        "id": "02",
+        "title": "Services Offered",
+        "description": "Viventro provides event planning, management, and coordination services. The scope of services for each booking will be defined in a separate service agreement signed by both parties."
+      },
+      {
+        "id": "03",
+        "title": "Booking & Payment",
+        "description": "All bookings require a non-refundable deposit of 25% of the total service fee to confirm your event. The remaining balance is due 14 days before the event date unless otherwise agreed."
+      },
+      {
+        "id": "04",
+        "title": "Client Responsibilities",
+        "description": "Clients are responsible for providing accurate event details, timely approvals, and necessary permissions. Any delays caused by the client may affect service delivery and timelines."
+      },
+      {
+        "id": "05",
+        "title": "Intellectual Property",
+        "description": "All content on the Viventro website, including text, images, logos, and graphics, is the intellectual property of Viventro and may not be reproduced without prior written permission."
+      },
+      {
+        "id": "06",
+        "title": "Confidentiality",
+        "description": "Both parties agree to keep confidential all information exchanged during the planning and execution of events. This obligation survives the termination of the service agreement."
+      },
+      {
+        "id": "07",
+        "title": "Governing Law",
+        "description": "These Terms & Conditions are governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Mumbai, Maharashtra."
+      },
+      {
+        "id": "08",
+        "title": "Modifications to Terms",
+        "description": "Viventro reserves the right to modify these Terms & Conditions at any time. Continued use of our services after changes constitutes acceptance of the revised terms."
+      }
+    ],
+    "helpSection": {
+      "titlePart1": "Questions About",
+      "titleHighlight": "Our Terms?",
+      "description": "If you have any questions about our Terms & Conditions or need clarification on any points, our team is happy to assist.",
+      "contactInfo": {
+        "call": {
+          "label": "Call Us",
+          "number": "+1 123 456 7890",
+          "timing": "Mon - Sat (10:00 AM - 7:00 PM)"
+        },
+        "email": {
+          "label": "Email Us",
+          "address": "hello@viventro.com",
+          "response": "We reply within 24 hours"
+        },
+        "visit": {
+          "label": "Visit Us",
+          "address": "123 Celebration Avenue, Mumbai, Maharashtra 400001 India"
+        }
+      },
+      "footerText": "These Terms & Conditions constitute the entire agreement between you and Viventro. Thank you for choosing us for your special celebrations."
+    }
+  },
+  
+  "NotFoundPage": {
+    "backgroundImage": "/notfoundercover.png",
+    "errorCode": "404",
+    "title": "Oops! Page Not Found",
+    "primaryButton": {
+      "label": "Back to Home",
+      "href": "/"
+    },
+    "secondaryButton": {
+      "label": "Explore Our Events",
+      "href": "/events"
+    }
+  },
+
+  "SitemapPage": {
+    "pageBanner": {
+      "title": "Sitemap",
+      "breadcrumbs": [
+        { "label": "Home", "href": "/" },
+        { "label": "Sitemap", "href": "/sitemap" }
+      ],
+      "backgroundImage": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    },
+    "sections": [
+      {
+        "title": "Main Pages",
+        "icon": "Home",
+        "links": [
+          { "label": "Home", "href": "/" },
+          { "label": "About Us", "href": "/about-us" },
+          { "label": "Mission", "href": "/our-mission" },
+          { "label": "Vision", "href": "/our-vision" },
+          { "label": "Our Story", "href": "/our-story" },
+          { "label": "Awards & Achievements", "href": "/awards" }
+        ]
+      },
+      {
+        "title": "Our Team",
+        "icon": "Users",
+        "links": [
+          { "label": "Our Team", "href": "/our-team" },
+          { "label": "Team Detail", "href": "/team-detail" }
+        ]
+      },
+      {
+        "title": "Opportunities",
+        "icon": "Briefcase",
+        "links": [
+          { "label": "Why Choose Us", "href": "/why-choose-us" },
+          { "label": "Careers", "href": "/career" },
+          { "label": "Internship / Law Students", "href": "/internship" }
+        ]
+      },
+      {
+        "title": "Services",
+        "icon": "Settings",
+        "links": [
+          { "label": "Services", "href": "/services" },
+          { "label": "Service Detail", "href": "/service-detail" }
+        ]
+      },
+      {
+        "title": "Events",
+        "icon": "Calendar",
+        "links": [
+          { "label": "Events", "href": "/events" },
+          { "label": "Event Detail", "href": "/event-detail" }
+        ]
+      },
+      {
+        "title": "Gallery",
+        "icon": "Image",
+        "links": [
+          { "label": "Photo Gallery", "href": "/photo-gallery" },
+          { "label": "Video Gallery", "href": "/video-gallery" }
+        ]
+      },
+      {
+        "title": "Blog / News",
+        "icon": "Newspaper",
+        "links": [
+          { "label": "Blog / News", "href": "/blog" },
+          { "label": "Blog Detail", "href": "/blog-detail" }
+        ]
+      },
+      {
+        "title": "Contact & More",
+        "icon": "Mail",
+        "links": [
+          { "label": "Contact Us", "href": "/contact-us" },
+          { "label": "Testimonials", "href": "/testimonials" },
+          { "label": "Our Clients", "href": "/clients" },
+          { "label": "Our Partners / Sponsors", "href": "/our-partners" },
+          { "label": "FAQ", "href": "/faq" },
+          { "label": "Request a Quote", "href": "/get-a-quote" }
+        ]
       }
     ]
   }

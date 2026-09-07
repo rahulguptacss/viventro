@@ -17,7 +17,7 @@ export default function CareerHero({ data }: CareerHeroProps) {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Left Text Content */}
-          <div className="w-full lg:w-[46%] flex flex-col justify-center">
+          <div className="w-full lg:w-[46%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function CareerHero({ data }: CareerHeroProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[36px] sm:text-[44px] lg:text-[46px] xl:text-[52px] font-bold text-[#0d1430] leading-[1.08] tracking-tight font-serif mb-6 whitespace-pre-line"
+              className="text-[36px] sm:text-[44px] lg:text-[46px] xl:text-[52px] font-bold text-[#0d1430] leading-[1.08] tracking-tight font-serif mb-6 whitespace-normal lg:whitespace-pre-line"
             >
               {data.title}
               <span className="text-[#c28e23] block">{data.highlightTitle}</span>
@@ -60,7 +60,7 @@ export default function CareerHero({ data }: CareerHeroProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-[#3b406e] leading-relaxed text-[16px] mb-10 max-w-lg whitespace-pre-line"
+              className="text-[#3b406e] leading-relaxed text-[16px] mb-10 max-w-lg whitespace-normal lg:whitespace-pre-line"
             >
               {data.description}
             </motion.p>

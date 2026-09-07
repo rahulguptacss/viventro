@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight, ArrowUpRight, Menu, X, ClipboardList, Users, Calendar, Cake, Music, MapPin } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { MenuItem } from "../../types";
 
@@ -23,6 +24,8 @@ interface HeaderProps {
 export default function Header({ data }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<number | null>(null);
+  const [openNestedMobileDropdown, setOpenNestedMobileDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   return (
     <motion.header 
@@ -51,11 +54,13 @@ export default function Header({ data }: HeaderProps) {
         </div>
 
         {/* Middle: Navigation */}
-        <nav className="hidden lg:flex items-center gap-10 xl:gap-12 pl-4">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 pl-4">
           {data.menu.map((item, i) => {
             // Check if active or has sub-items dynamically
-            const isActive = item.label === "Home";
             const hasDropdown = item.subItems && item.subItems.length > 0;
+            const isActive = item.href === "/" 
+              ? pathname === "/" 
+              : (pathname === item.href || (hasDropdown && item.subItems!.some(sub => pathname === sub.href || pathname.startsWith(`${sub.href}/`))));
             
             return (
               <div key={i} className="relative group flex flex-col items-center">
@@ -75,15 +80,43 @@ export default function Header({ data }: HeaderProps) {
                 {hasDropdown && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 p-2 min-w-[200px] flex flex-col">
-                      {item.subItems?.map((subItem, subIndex) => (
-                        <Link 
-                          key={subIndex} 
-                          href={subItem.href}
-                          className="px-4 py-2.5 hover:bg-[#fdfaf5] text-gray-700 hover:text-[#e4a836] rounded-xl transition-colors font-medium whitespace-nowrap text-[15px]"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
+                      {item.subItems?.map((subItem, subIndex) => {
+                        const hasNestedDropdown = subItem.subItems && subItem.subItems.length > 0;
+                        
+                        if (hasNestedDropdown) {
+                          return (
+                            <div key={subIndex} className="relative group/nested flex flex-col">
+                              <div className="flex items-center justify-between px-4 py-2.5 hover:bg-[#fdfaf5] text-gray-700 hover:text-[#e4a836] rounded-xl transition-colors font-medium whitespace-nowrap text-[15px] cursor-pointer">
+                                <span>{subItem.label}</span>
+                                <ChevronRight className="w-4 h-4 text-gray-400 group-hover/nested:text-[#e4a836]" />
+                              </div>
+                              <div className="absolute top-0 left-full pt-0 pl-1 opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-300 z-50">
+                                <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100 p-2 min-w-[200px] flex flex-col">
+                                  {subItem.subItems?.map((nestedItem, nestedIndex) => (
+                                    <Link 
+                                      key={nestedIndex} 
+                                      href={nestedItem.href}
+                                      className="px-4 py-2.5 hover:bg-[#fdfaf5] text-gray-700 hover:text-[#e4a836] rounded-xl transition-colors font-medium whitespace-nowrap text-[15px]"
+                                    >
+                                      {nestedItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        }
+
+                        return (
+                          <Link 
+                            key={subIndex} 
+                            href={subItem.href}
+                            className="px-4 py-2.5 hover:bg-[#fdfaf5] text-gray-700 hover:text-[#e4a836] rounded-xl transition-colors font-medium whitespace-nowrap text-[15px]"
+                          >
+                            {subItem.label}
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -127,8 +160,10 @@ export default function Header({ data }: HeaderProps) {
           >
             <nav className="flex flex-col gap-3 p-4">
               {data.menu.map((item, i) => {
-                const isActive = item.label === "Home";
                 const hasDropdown = item.subItems && item.subItems.length > 0;
+                const isActive = item.href === "/" 
+                  ? pathname === "/" 
+                  : (pathname === item.href || (hasDropdown && item.subItems!.some(sub => pathname === sub.href || pathname.startsWith(`${sub.href}/`))));
                 const isOpen = openMobileDropdown === i;
                 
                 const renderIcon = (iconName?: string) => {
@@ -175,19 +210,61 @@ export default function Header({ data }: HeaderProps) {
                           className="flex flex-col overflow-hidden"
                         >
                           <div className="py-2">
-                            {item.subItems?.map((subItem, subIndex) => (
-                              <Link
-                                key={subIndex}
-                                href={subItem.href}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="group flex items-center justify-between px-6 py-3.5 text-[15px] font-medium text-gray-300 hover:text-[#e4a836] transition-colors border-b border-white/[0.04] last:border-0"
-                              >
-                                <div className="flex items-center">
-                                  <span>{subItem.label}</span>
-                                </div>
-                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-[#e4a836] transition-colors" />
-                              </Link>
-                            ))}
+                            {item.subItems?.map((subItem, subIndex) => {
+                              const hasNestedDropdown = subItem.subItems && subItem.subItems.length > 0;
+                              const isNestedOpen = openNestedMobileDropdown === `${i}-${subIndex}`;
+
+                              if (hasNestedDropdown) {
+                                return (
+                                  <div key={subIndex} className="flex flex-col border-b border-white/[0.04] last:border-0">
+                                    <div
+                                      onClick={() => setOpenNestedMobileDropdown(isNestedOpen ? null : `${i}-${subIndex}`)}
+                                      className="group flex items-center justify-between px-6 py-3.5 text-[15px] font-medium text-gray-300 hover:text-[#e4a836] transition-colors cursor-pointer"
+                                    >
+                                      <div className="flex items-center">
+                                        <span>{subItem.label}</span>
+                                      </div>
+                                      <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${isNestedOpen ? 'rotate-180 text-[#e4a836]' : 'group-hover:text-[#e4a836]'}`} />
+                                    </div>
+                                    <AnimatePresence>
+                                      {isNestedOpen && (
+                                        <motion.div
+                                          initial={{ opacity: 0, height: 0 }}
+                                          animate={{ opacity: 1, height: "auto" }}
+                                          exit={{ opacity: 0, height: 0 }}
+                                          className="flex flex-col bg-white/5 overflow-hidden"
+                                        >
+                                          {subItem.subItems?.map((nestedItem, nestedIndex) => (
+                                            <Link
+                                              key={nestedIndex}
+                                              href={nestedItem.href}
+                                              onClick={() => setIsMobileMenuOpen(false)}
+                                              className="flex items-center px-8 py-3 text-[14px] font-medium text-gray-400 hover:text-[#e4a836] transition-colors"
+                                            >
+                                              {nestedItem.label}
+                                            </Link>
+                                          ))}
+                                        </motion.div>
+                                      )}
+                                    </AnimatePresence>
+                                  </div>
+                                );
+                              }
+
+                              return (
+                                <Link
+                                  key={subIndex}
+                                  href={subItem.href}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className="group flex items-center justify-between px-6 py-3.5 text-[15px] font-medium text-gray-300 hover:text-[#e4a836] transition-colors border-b border-white/[0.04] last:border-0"
+                                >
+                                  <div className="flex items-center">
+                                    <span>{subItem.label}</span>
+                                  </div>
+                                  <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-[#e4a836] transition-colors" />
+                                </Link>
+                              );
+                            })}
                           </div>
                         </motion.div>
                       )}

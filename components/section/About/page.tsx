@@ -76,7 +76,7 @@ export default function About({ data }: AboutProps) {
                 </p>
 
                 <Link
-                  href="#"
+                  href={data.buttonLink || "#"}
                   className="group mt-4 inline-flex items-center gap-3 rounded-full bg-[#D49A4D] py-1.5 pl-5 pr-1.5 text-[16px] font-semibold text-white shadow-[0_7px_18px_rgba(212,154,77,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bd853e]"
                 >
                   <span>{data.buttonText}</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FaBriefcase, FaRegCalendarAlt, FaMapMarkerAlt, FaBullhorn, FaUsers, FaRegClipboard } from "react-icons/fa";
 import { FiMapPin, FiBriefcase, FiCalendar } from "react-icons/fi";
@@ -27,7 +28,7 @@ const getJobIcon = (id: number) => {
 
 export default function CareerJobs({ data }: CareerJobsProps) {
   return (
-    <section id="open-positions" className="pt-8 pb-10 bg-[#f9fafc] text-black">
+    <section id="open-positions" className="pt-0 md:pt-8 pb-0 md:pb-10 bg-[#f9fafc] text-black">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -111,10 +112,10 @@ export default function CareerJobs({ data }: CareerJobsProps) {
 
               {/* Right Side: Button */}
               <div className="w-full lg:w-[20%] flex items-center justify-center lg:pl-8 lg:border-l border-t lg:border-t-0 border-[#fbebd4] pt-5 lg:pt-1">
-                <button className="cursor-pointer group/btn flex items-center justify-center gap-2 bg-transparent hover:bg-[#d38c2a] border border-[#d38c2a] text-[#d38c2a] hover:text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-[14.5px] w-full">
+                <Link href={`/career/${job.id}`} className="cursor-pointer group/btn flex items-center justify-center gap-2 bg-transparent hover:bg-[#d38c2a] border border-[#d38c2a] text-[#d38c2a] hover:text-white px-6 py-2.5 rounded-lg font-bold transition-colors text-[14.5px] w-full">
                   View Details
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" strokeWidth={2.5} />
-                </button>
+                </Link>
               </div>
 
             </motion.div>

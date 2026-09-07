@@ -32,10 +32,10 @@ export default function WhyChooseUs({ data }: WhyChooseUsProps) {
     <section className="pt-0 lg:pt-12 pb-4 lg:pb-8 bg-white text-black overflow-hidden relative">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 xl:gap-20 items-start">
-          
+
           {/* Left Image Section */}
           <div className="w-full lg:w-[45%] relative">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -43,9 +43,9 @@ export default function WhyChooseUs({ data }: WhyChooseUsProps) {
             >
               <Image src={data.image} alt="Event setup" fill className="object-cover" />
             </motion.div>
-            
+
             {/* Overlay Card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -56,15 +56,15 @@ export default function WhyChooseUs({ data }: WhyChooseUsProps) {
                 <Sparkles className="w-6 h-6" strokeWidth={2} />
               </div>
               <div>
-                <h4 className="text-[16px] font-bold text-gray-900 leading-[1.3] mb-1">Seamless Experiences, <br/>Memories That Last</h4>
-                <p className="text-gray-500 text-[13px] leading-relaxed">From concept to celebration,<br/>we handle every detail with care.</p>
+                <h4 className="text-[16px] font-bold text-gray-900 leading-[1.3] mb-1">Seamless Experiences, <br />Memories That Last</h4>
+                <p className="text-gray-500 text-[13px] leading-relaxed">From concept to celebration,<br />we handle every detail with care.</p>
               </div>
             </motion.div>
           </div>
 
           {/* Right Content Section */}
           <div className="w-full lg:w-[55%] mt-12 lg:mt-0">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function WhyChooseUs({ data }: WhyChooseUsProps) {
               </div>
             </motion.div>
 
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -93,7 +93,7 @@ export default function WhyChooseUs({ data }: WhyChooseUsProps) {
               ))}
             </motion.h2>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -104,7 +104,7 @@ export default function WhyChooseUs({ data }: WhyChooseUsProps) {
 
             <div className="space-y-0">
               {data.features.map((feature, index) => (
-              <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
