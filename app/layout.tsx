@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import fs from "fs";
 import path from "path";
 import GlobalLayout from "../components/layout/GlobalLayout";
 import { EventTemplateData } from "../components/types";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,7 +29,7 @@ export default function RootLayout({
   // Extract all page banners
   const banners: Record<string, any> = {};
   const pages = fullData.categories.Event.templateComponents['template-2'].pages;
-  const sections = fullData.categories.Event.sections;
+  const sections = (fullData.categories.Event.templateComponents['template-2'] as any).sections;
 
   Object.entries(pages).forEach(([pageKey, pageData]) => {
     const bannerComp = pageData?.components?.find(c => c.key === "PageBanner");
@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased overflow-x-hidden bg-black text-white`}
+        className={`${poppins.className} antialiased overflow-x-hidden bg-black text-white`}
       >
         <GlobalLayout headerData={headerData} footerData={footerData} banners={banners}>
           {children}

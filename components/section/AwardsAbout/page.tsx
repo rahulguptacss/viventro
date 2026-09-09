@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -74,7 +74,7 @@ export default function AwardsAbout({ data }: { data: AwardsAboutData }) {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               className="text-[36px] sm:text-[44px] md:text-[58px] font-bold text-[#0B1221] mb-4 lg:mb-3 leading-[1.1] tracking-tight"
-              style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
+              style={{ fontFamily: '"Poppins", sans-serif' }}
             >
               {data.title.split(' ').slice(0, -1).join(' ')} <br className="hidden md:block" />
               <span className="text-[#C46814]">{data.title.split(' ').slice(-1).join(' ')}</span>

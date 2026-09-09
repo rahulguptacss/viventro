@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import About from '../../components/section/About/page';
 import MissionVision from '../../components/section/MissionVision/page';
@@ -14,7 +14,7 @@ export default async function AboutUs() {
   const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
   const fileContents = fs.readFileSync(filePath);
   const fullData = JSON.parse(fileContents.toString()) as EventTemplateData;
-  const sections = fullData.categories.Event.sections;
+  const sections = fullData.categories.Event.templateComponents['template-2'].sections;
 
   const aboutData = sections.About?.variants?.EventAbout2;
   const missionVisionData = sections.MissionVision?.variants?.EventMissionVision2;

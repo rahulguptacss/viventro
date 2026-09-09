@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import TestimonialsPageGrid from '../../components/section/TestimonialsPageGrid/page';
 import { EventTemplateData } from '../../components/types';
@@ -17,7 +17,7 @@ export default async function TestimonialsPage() {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
 
-  const sections = fullData.categories.Event.sections;
+  const sections = fullData.categories.Event.templateComponents['template-2'].sections;
   const pages = fullData.categories.Event.templateComponents['template-2'].pages;
   const components = pages['testimonials']?.components || [];
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -111,7 +111,7 @@ export default function AwardsStats({ data }: { data: AwardsStatsData }) {
 
             <h2
               className="text-[24px] sm:text-[32px] md:text-[40px] font-bold text-[#0B1221] mx-3 sm:mx-4 leading-tight tracking-tight"
-              style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
+              style={{ fontFamily: '"Poppins", sans-serif' }}
             >
               {data.title}
             </h2>
@@ -148,7 +148,7 @@ export default function AwardsStats({ data }: { data: AwardsStatsData }) {
               </div>
               <span 
                 className="text-[40px] md:text-[48px] font-light text-[#C46814] leading-none mb-2 tracking-tight"
-                style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
+                style={{ fontFamily: '"Poppins", sans-serif' }}
               >
                 <AnimatedCounter value={stat.value} />
               </span>

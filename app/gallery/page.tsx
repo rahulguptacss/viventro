@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import PageBanner from '../../components/section/PageBanner/page';
 import Gallery from '../../components/section/Gallery/page';
 import { EventTemplateData } from '../../components/types';
 
@@ -9,28 +8,11 @@ export default async function GalleryPage() {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
 
-  const galleryData = fullData.categories.Event.sections.Gallery?.variants.Gallery1;
-  const baseBannerData = fullData.categories.Event.sections.PageBanner?.variants?.EventPageBanner2;
 
-  const pageBannerData = baseBannerData ? {
-    ...baseBannerData,
-    title: "Gallery",
-    breadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Gallery", href: "/gallery" }
-    ]
-  } : {
-    title: "Gallery",
-    breadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Gallery", href: "/gallery" }
-    ],
-    backgroundImage: "/breadcrumb.png"
-  };
+  const galleryData = fullData.categories.Event.templateComponents['template-2'].sections.Gallery?.variants.Gallery1;
 
   return (
     <main>
-      <PageBanner data={pageBannerData} />
       {galleryData ? (
         <Gallery data={galleryData} />
       ) : (

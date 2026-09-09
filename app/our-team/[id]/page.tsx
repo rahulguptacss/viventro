@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import TeamDetail from '../../../components/section/TeamDetail/page';
@@ -15,7 +15,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
   
-  const teamSection = fullData.categories.Event.sections.TeamPageGrid?.variants.EventTeamPageGrid;
+  const teamSection = fullData.categories.Event.templateComponents['template-2'].sections.TeamPageGrid?.variants.EventTeamPageGrid;
   
   if (!teamSection) {
     return notFound();

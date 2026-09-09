@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -32,7 +32,7 @@ export default function AwardsCertificates({ data }: { data: AwardsCertificatesD
 
             <h2
               className="text-[20px] sm:text-[32px] md:text-[40px] font-bold text-[#0B1221] mx-3 sm:mx-4 leading-tight tracking-tight text-center"
-              style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
+              style={{ fontFamily: '"Poppins", sans-serif' }}
             >
               {data.title}
             </h2>

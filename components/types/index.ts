@@ -399,7 +399,6 @@ export interface EventTemplateData {
   };
   categories: {
     Event: {
-      sections: Record<string, { variants: Record<string, any> }>;
       templateComponents: {
         "template-2": {
           pages: {
@@ -413,6 +412,7 @@ export interface EventTemplateData {
               components: PageComponent[];
             } | undefined;
           };
+          sections: Record<string, { variants: Record<string, any> } | Record<string, any>>;
         };
       };
     };

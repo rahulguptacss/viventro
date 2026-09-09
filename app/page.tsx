@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import Hero from '../components/section/Hero/page';
 import About from '../components/section/About/page';
@@ -30,7 +30,7 @@ export default async function Home() {
   const fullData = JSON.parse(fileContents) as EventTemplateData;
   
   const template = fullData.categories.Event.templateComponents['template-2'];
-  const sections = fullData.categories.Event.sections;
+  const sections = fullData.categories.Event.templateComponents['template-2'].sections;
   const components = template.pages.home.components;
   
   return (

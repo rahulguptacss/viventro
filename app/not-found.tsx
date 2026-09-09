@@ -13,7 +13,8 @@ export default function NotFound() {
   const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as any;
-  const data = fullData.NotFoundPage as NotFoundPageData;
+  const sections = fullData.categories.Event.templateComponents["template-2"].sections;
+  const data = sections.NotFoundPage as NotFoundPageData;
 
   return (
     <main className="min-h-[70vh] md:min-h-screen bg-[#050505] flex flex-col items-center justify-center relative overflow-hidden">

@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import PageBanner from '../../components/section/PageBanner/page';
 import GetQuoteSection from '../../components/section/GetQuoteSection/page';
 import { EventTemplateData } from '../../components/types';
 
@@ -12,12 +11,13 @@ export const metadata = {
 export default async function GetQuote() {
   const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
   const fileContents = fs.readFileSync(filePath);
-  const fullData = JSON.parse(fileContents.toString()) as EventTemplateData;
-  const pageData = (fullData as any).GetQuotePage;
+  const fullData = JSON.parse(fileContents.toString()) as any;
+  const template2 = fullData.categories?.Event?.templateComponents?.['template-2'];
+  const sections = template2?.sections ?? fullData;
+  const pageData = sections.GetQuotePage ?? fullData.GetQuotePage;
 
   return (
     <main className="bg-[#f9fafc]">
-      {pageData?.pageBanner && <PageBanner data={pageData.pageBanner} />}
       {pageData && <GetQuoteSection data={pageData} />}
     </main>
   );

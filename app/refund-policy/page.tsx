@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import PageBanner from '../../components/section/PageBanner/page';
 import PrivacyPolicySection from '../../components/section/PrivacyPolicySection/page';
 import { RefundPolicyPageData } from '../../components/types';
 
@@ -13,7 +12,8 @@ export default function RefundPolicyPage() {
   const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
   const fileContents = fs.readFileSync(filePath);
   const fullData = JSON.parse(fileContents.toString()) as any;
-  const pageData = fullData.RefundPolicyPage as RefundPolicyPageData;
+  const sections = fullData.categories.Event.templateComponents["template-2"].sections;
+  const pageData = sections.RefundPolicyPage as RefundPolicyPageData;
 
   const bannerData = {
     title: pageData.pageBanner.title,
@@ -22,9 +22,7 @@ export default function RefundPolicyPage() {
   };
 
   return (
-    <main className="bg-white">
-      <PageBanner data={bannerData} />
-      <PrivacyPolicySection data={pageData} />
+    <main className="bg-white">      <PrivacyPolicySection data={pageData} />
     </main>
   );
 }

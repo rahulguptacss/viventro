@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -67,7 +67,7 @@ export default function Header({ data }: HeaderProps) {
                 <Link
                   href={item.href}
                   className={`flex items-center gap-1.5 text-[17px] font-normal transition-colors hover:text-[#e4a836] ${isActive ? 'text-[#e4a836]' : 'text-gray-100'} py-2`}
-                  style={{ fontFamily: '"Inter", "Segoe UI", sans-serif' }}
+                  style={{ fontFamily: '"Poppins", sans-serif' }}
                 >
                   {item.label}
                   {hasDropdown && <ChevronDown className={`w-4 h-4 mt-0.5 stroke-[1.5px] transition-transform group-hover:rotate-180 ${isActive ? 'text-[#e4a836]' : 'text-gray-400 group-hover:text-[#e4a836]'}`} />}
@@ -131,7 +131,7 @@ export default function Header({ data }: HeaderProps) {
             href={data.button.href}
             className="hidden md:flex items-center gap-5 bg-[#e4a836] hover:bg-[#c9922e] text-white font-normal pl-8 pr-2 py-2 rounded-full transition-colors shrink-0"
           >
-            <span className="text-[17px]" style={{ fontFamily: '"Inter", "Segoe UI", sans-serif' }}>
+            <span className="text-[17px]" style={{ fontFamily: '"Poppins", sans-serif' }}>
               {data.button.label}
             </span>
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">

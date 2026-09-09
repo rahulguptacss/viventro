@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -36,7 +36,7 @@ export default function TeamPageGrid({ data }: TeamPageGridProps) {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-[36px] sm:text-[44px] md:text-[56px] font-bold leading-[1.1] text-[#0B1221] tracking-tight mb-3"
-            style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}
+            style={{ fontFamily: '"Poppins", sans-serif' }}
           >
             {data.title.split('Perfect Event').map((text, i, arr) => (
               <span key={i}>

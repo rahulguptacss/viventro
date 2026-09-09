@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import CareerHero from '../../components/section/CareerHero/page';
 import CareerJobs from '../../components/section/CareerJobs/page';
@@ -14,7 +14,7 @@ export default function CareerPage() {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
   
-  const sections = fullData.categories.Event.sections;
+  const sections = fullData.categories.Event.templateComponents['template-2'].sections;
   const careerHeroData = sections.CareerHero?.variants?.CareerHero1;
   const careerJobsData = sections.CareerJobs?.variants?.CareerJobs1;
 

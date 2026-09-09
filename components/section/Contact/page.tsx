@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -143,7 +143,7 @@ export default function Contact({ data }: ContactProps) {
                     type="button"
                     className="inline-flex items-center gap-5 bg-[#e4a836] hover:bg-[#c9922e] text-white font-normal pl-8 pr-2 py-2 rounded-full transition-colors group"
                   >
-                    <span className="text-[17px]" style={{ fontFamily: '"Inter", "Segoe UI", sans-serif' }}>
+                    <span className="text-[17px]" style={{ fontFamily: '"Poppins", sans-serif' }}>
                       Send Message
                     </span>
                     <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">

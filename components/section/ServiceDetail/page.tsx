@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -62,11 +62,11 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-6"
             >
-              <h2 className="text-[26px] sm:text-[32px] md:text-[44px] font-semibold text-[#0B1221] leading-[1.1] md:leading-[1.2]" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+              <h2 className="text-[26px] sm:text-[32px] md:text-[44px] font-semibold text-[#0B1221] leading-[1.1] md:leading-[1.2]" style={{ fontFamily: '"Poppins", sans-serif' }}>
                 {data.title}
               </h2>
               {data.subtitle && (
-                <h3 className="text-[26px] sm:text-[32px] md:text-[44px] font-semibold text-[#d49f53] leading-[1.1] md:leading-[1.2]" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+                <h3 className="text-[26px] sm:text-[32px] md:text-[44px] font-semibold text-[#d49f53] leading-[1.1] md:leading-[1.2]" style={{ fontFamily: '"Poppins", sans-serif' }}>
                   {data.subtitle}
                 </h3>
               )}
@@ -98,7 +98,7 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
                 }}
                 className="mb-8"
               >
-                <h3 className="text-[24px] md:text-[28px] font-bold text-[#0B1221] mb-4" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+                <h3 className="text-[24px] md:text-[28px] font-bold text-[#0B1221] mb-4" style={{ fontFamily: '"Poppins", sans-serif' }}>
                   What We Offer
                 </h3>
 
@@ -135,7 +135,7 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
                 className="flex flex-col md:flex-row gap-8 items-center mt-0"
               >
                 <div className="w-full md:w-[55%]">
-                  <h3 className="text-[24px] md:text-[28px] font-bold text-[#0B1221] mb-2" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+                  <h3 className="text-[24px] md:text-[28px] font-bold text-[#0B1221] mb-2" style={{ fontFamily: '"Poppins", sans-serif' }}>
                     Why Choose Us?
                   </h3>
                   <div className="space-y-2">
@@ -175,7 +175,7 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
               viewport={{ once: true }}
               className="bg-[#0B1221] rounded-[24px] p-8 shadow-xl"
             >
-              <h3 className="text-white text-[22px] font-bold mb-6" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+              <h3 className="text-white text-[22px] font-bold mb-6" style={{ fontFamily: '"Poppins", sans-serif' }}>
                 All Services
               </h3>
               <div className="flex flex-col gap-3">
@@ -209,7 +209,7 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
               transition={{ delay: 0.1 }}
               className="bg-[#FCFBF8] rounded-[24px] p-8 shadow-sm border border-[#f0e6d6]"
             >
-              <h3 className="text-[#0F172A] text-[22px] font-bold" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+              <h3 className="text-[#0F172A] text-[22px] font-bold" style={{ fontFamily: '"Poppins", sans-serif' }}>
                 Get Started
               </h3>
               <div className="w-10 h-[2px] bg-[#d49f53] mt-3 mb-8" />
@@ -247,7 +247,7 @@ export default function ServiceDetail({ data, allServices }: ServiceDetailProps)
               transition={{ delay: 0.2 }}
               className="bg-white rounded-[24px] p-8 border border-gray-100 shadow-sm flex flex-col items-start"
             >
-              <h3 className="text-[#0B1221] text-[20px] font-bold mb-5" style={{ fontFamily: '"Inter", "Inter Fallback", sans-serif' }}>
+              <h3 className="text-[#0B1221] text-[20px] font-bold mb-5" style={{ fontFamily: '"Poppins", sans-serif' }}>
                 Follow Us:
               </h3>
               <div className="flex items-center gap-3">

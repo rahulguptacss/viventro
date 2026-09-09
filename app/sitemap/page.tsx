@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import * as LucideIcons from 'lucide-react';
-import PageBanner from '../../components/section/PageBanner/page';
 import { SitemapPageData } from '../../components/types';
 
 export const metadata = {
@@ -21,12 +20,14 @@ export default function SitemapPage() {
   const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as any;
-  const data = fullData.SitemapPage as SitemapPageData;
+  const template2 = fullData.categories?.Event?.templateComponents?.['template-2'] as any;
+  const sections = template2?.sections ?? fullData;
+  const data = (sections.SitemapPage ?? fullData.SitemapPage) as SitemapPageData;
 
   return (
     <main className="min-h-screen bg-[#fcfcfc]">
       {/* Banner */}
-      <PageBanner data={data.pageBanner} />
+
 
       {/* Content */}
       <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
@@ -48,7 +49,7 @@ export default function SitemapPage() {
                 <ul className="flex flex-col space-y-1">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex} className="border-b border-gray-100 last:border-0 pb-1 last:pb-0 mb-1 last:mb-0">
-                      <Link 
+                      <Link
                         href={link.href}
                         className="group flex items-center gap-3 py-2 px-1 rounded-lg hover:bg-[#fdfaf5] transition-colors"
                       >

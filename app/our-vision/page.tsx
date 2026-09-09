@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import Vision from '../../components/section/Vision/page';
 import Stats from '../../components/section/Stats/page';
@@ -19,7 +19,7 @@ export default async function OurVision() {
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
 
-  const sections = fullData.categories.Event.sections;
+  const sections = fullData.categories.Event.templateComponents['template-2'].sections;
   const pages = fullData.categories.Event.templateComponents['template-2'].pages;
   const components = pages['our-vision']?.components || [];
 

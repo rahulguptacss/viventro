@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import PageBanner from "@/components/section/PageBanner/page";
 import EventDetail from "@/components/section/EventDetail/page";
 import { EventTemplateData, EventItem } from '@/components/types';
 
@@ -9,27 +8,16 @@ export default async function EventDetailPage({ params }: { params: Promise<{ id
   const filePath = path.join(process.cwd(), 'components', 'data', 'data.json');
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
-  const sections = fullData.categories.Event.sections;
+  const sections = fullData.categories.Event.templateComponents["template-2"].sections;
 
   const eventsData = sections.Events?.variants?.EventEvents2;
   const allEvents = eventsData?.items || [];
   
   const currentEvent = allEvents.find((s: EventItem) => s.id.toString() === resolvedParams.id) || allEvents[0];
 
-  const baseBannerData = sections.PageBanner?.variants?.EventPageBanner2;
-  const bannerData = baseBannerData ? {
-    ...baseBannerData,
-    title: currentEvent.title,
-    breadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Events", href: "/events" },
-      { label: currentEvent.title, href: "#" }
-    ]
-  } : undefined;
 
   return (
     <main>
-      {bannerData && <PageBanner data={bannerData} />}
       {currentEvent && <EventDetail data={currentEvent} />}
     </main>
   );

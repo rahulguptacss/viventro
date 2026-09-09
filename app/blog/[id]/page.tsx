@@ -1,4 +1,4 @@
-import fs from 'fs';
+﻿import fs from 'fs';
 import path from 'path';
 import BlogDetail from '../../../components/section/BlogDetail/page';
 import { EventTemplateData } from '../../../components/types';
@@ -9,7 +9,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const fullData = JSON.parse(fileContents) as EventTemplateData;
 
-  const blogSection = fullData.categories.Event.sections['Blog']?.variants['EventBlog2'];
+  const blogSection = fullData.categories.Event.templateComponents['template-2'].sections['Blog']?.variants['EventBlog2'];
 
   if (!blogSection) return notFound();
 
