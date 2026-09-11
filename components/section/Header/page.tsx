@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -34,7 +34,7 @@ export default function Header({ data }: HeaderProps) {
       transition={{ duration: 0.5 }}
       className="fixed top-6 left-0 w-full z-50 px-4 md:px-8 flex justify-center"
     >
-      <div className="w-full max-w-[1400px] flex items-center justify-between bg-black/20 backdrop-blur-md border border-[#e4a836] rounded-full pl-4 md:pl-8 pr-3 py-2 md:py-3 shadow-2xl">
+      <div className="w-full max-w-[1400px] flex items-center justify-between bg-black/20 backdrop-blur-md border-2 border-[#c9922e] rounded-full pl-4 md:pl-8 pr-3 py-2 md:py-3 shadow-2xl">
         
         {/* Left: Logo & Separator */}
         <div className="flex items-center gap-8">
