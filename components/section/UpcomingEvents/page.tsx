@@ -131,70 +131,68 @@ export default function UpcomingEvents({ data, theme = 'dark', hideHeaderButton 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
-              className={`group flex flex-row border rounded-[16px] md:rounded-[24px] p-2 sm:p-3 md:px-4 md:py-2.5 gap-2 sm:gap-4 xl:gap-8 overflow-hidden transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:border-[#D4AF37]/80 hover:shadow-[0_15px_40px_-15px_rgba(212,175,55,0.25)] ${
-                isLight ? 'bg-white border-gray-100 shadow-sm hover:shadow-lg' : 'bg-[#050505] border-[#D4AF37]/30'
-              }`}
             >
-              {/* Event Image */}
-              <div className="relative h-[140px] sm:h-[160px] lg:h-[180px] w-[110px] sm:w-[140px] lg:w-[280px] xl:w-[320px] rounded-[10px] md:rounded-[16px] overflow-hidden shrink-0">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
+              <Link
+                href={`/events/${event.id}`}
+                className={`block group flex flex-row border rounded-[16px] md:rounded-[24px] p-2 sm:p-3 md:px-4 md:py-2.5 gap-2 sm:gap-4 xl:gap-8 overflow-hidden transition-all duration-500 hover:-translate-y-1 md:hover:-translate-y-2 hover:border-[#D4AF37]/80 hover:shadow-[0_15px_40px_-15px_rgba(212,175,55,0.25)] ${
+                  isLight ? 'bg-white border-gray-100 shadow-sm hover:shadow-lg' : 'bg-[#050505] border-[#D4AF37]/30'
+                }`}
+              >
+                {/* Event Image */}
+                <div className="relative h-[140px] sm:h-[160px] lg:h-[180px] w-[110px] sm:w-[140px] lg:w-[280px] xl:w-[320px] rounded-[10px] md:rounded-[16px] overflow-hidden shrink-0">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
 
-              {/* Right Content Wrapper (Content + Meta) */}
-              <div className="flex-1 flex flex-row gap-3 sm:gap-4 md:gap-6 min-w-0 py-1 lg:py-2">
-                
-                {/* Main Content */}
-                <div className="flex-1 flex flex-col justify-start lg:justify-center min-w-0 xl:pr-2">
-                  <div>
-                    <div className="flex items-center gap-1.5 lg:gap-2 mb-1.5 lg:mb-2">
-                      <div className="scale-75 lg:scale-100 origin-left">
-                        {event.category && categoryIcons[event.category] ? categoryIcons[event.category] : categoryIcons["WEDDING"]}
+                {/* Right Content Wrapper (Content + Meta) */}
+                <div className="flex-1 flex flex-row gap-3 sm:gap-4 md:gap-6 min-w-0 py-1 lg:py-2">
+                  
+                  {/* Main Content */}
+                  <div className="flex-1 flex flex-col justify-start lg:justify-center min-w-0 xl:pr-2">
+                    <div>
+                      <div className="flex items-center gap-1.5 lg:gap-2 mb-1.5 lg:mb-2">
+                        <div className="scale-75 lg:scale-100 origin-left">
+                          {event.category && categoryIcons[event.category] ? categoryIcons[event.category] : categoryIcons["WEDDING"]}
+                        </div>
+                        <span className="text-[10px] sm:text-[11px] lg:text-[13px] font-semibold lg:font-bold text-[#D4AF37] tracking-wider lg:tracking-widest uppercase truncate">{event.category || "EVENT"}</span>
                       </div>
-                      <span className="text-[10px] sm:text-[11px] lg:text-[13px] font-semibold lg:font-bold text-[#D4AF37] tracking-wider lg:tracking-widest uppercase truncate">{event.category || "EVENT"}</span>
+                      <h3 className={`text-[14px] sm:text-[16px] lg:text-[20px] xl:text-[22px] font-medium lg:font-bold mb-1.5 lg:mb-1.5 leading-snug lg:truncate ${isLight ? 'text-[#0B1221]' : 'text-white'}`}>{event.title}</h3>
+                      <p className={`text-[11px] sm:text-[12px] xl:text-[15px] font-light lg:font-normal leading-snug lg:leading-relaxed mb-2 lg:mb-4 line-clamp-3 lg:line-clamp-none pr-2 lg:pr-0 max-w-xl ${isLight ? 'text-gray-600' : 'text-gray-400'}`}>{event.description}</p>
                     </div>
-                    <h3 className={`text-[14px] sm:text-[16px] lg:text-[20px] xl:text-[22px] font-medium lg:font-bold mb-1.5 lg:mb-1.5 leading-snug lg:truncate ${isLight ? 'text-[#0B1221]' : 'text-white'}`}>{event.title}</h3>
-                    <p className={`text-[11px] sm:text-[12px] xl:text-[15px] font-light lg:font-normal leading-snug lg:leading-relaxed mb-2 lg:mb-4 line-clamp-3 lg:line-clamp-none pr-2 lg:pr-0 max-w-xl ${isLight ? 'text-gray-600' : 'text-gray-400'}`}>{event.description}</p>
-                  </div>
-                  <Link
-                    href={`/events/${event.id}`}
-                    className="inline-flex items-center gap-1 lg:gap-2 text-[12px] sm:text-[13px] lg:text-[15px] text-[#D4AF37] font-semibold group/link w-max"
-                  >
-                    {event.buttonText || "Buy Ticket"}
-                    <ArrowUpRight className="w-3.5 h-3.5 lg:w-[18px] lg:h-[18px] group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" strokeWidth={2.5} />
-                  </Link>
-                </div>
 
-                {/* Divider (Hidden on very small screens, visible on lg+) */}
-                <div className={`hidden lg:block w-[1px] self-stretch my-2 lg:my-4 ${isLight ? 'bg-gray-100' : 'bg-[#D4AF37]/20 lg:bg-white/10'}`}></div>
-
-                {/* Event Details (Date/Location) */}
-                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-start gap-3 sm:gap-4 lg:gap-6 xl:gap-10 shrink-0 w-[80px] sm:w-[90px] lg:w-auto xl:pr-6 lg:pl-2 py-0 lg:py-0">
-                  
-                  {/* Date Box */}
-                  <div className={`flex flex-col items-center justify-center w-full lg:w-[120px] xl:w-[130px] h-[75px] sm:h-[75px] lg:h-[140px] xl:h-[150px] rounded-[6px] lg:rounded-[16px] border shrink-0 ${isLight ? 'bg-transparent border-transparent' : 'bg-[#050505] border-[#D4AF37]/20 lg:border-[#D4AF37]/30'}`}>
-                    <span className="text-[22px] sm:text-[24px] lg:text-[46px] xl:text-[52px] font-semibold lg:font-bold text-[#D4AF37] leading-none mb-0.5 lg:mb-2">{event.date}</span>
-                    <span className={`text-[9px] sm:text-[10px] lg:text-[15px] xl:text-[17px] font-medium lg:font-bold uppercase tracking-wider mb-0.5 lg:mb-2 ${isLight ? 'text-[#0B1221]' : 'text-white'}`}>{event.month}</span>
-                    <span className="text-[7px] sm:text-[8px] lg:text-[10px] xl:text-[11px] font-medium lg:font-medium text-gray-400 uppercase tracking-widest">{event.day || "SATURDAY"}</span>
                   </div>
-                  
-                  {/* Location & Time */}
-                  <div className="flex flex-col justify-center gap-2 lg:gap-6 xl:gap-8 w-full lg:min-w-[160px] xl:min-w-[180px]">
-                    <div className="flex items-start gap-1.5 lg:gap-4">
-                      <MapPin className="w-3 h-3 lg:w-5 lg:h-5 text-[#D4AF37] shrink-0 lg:mt-0.5" strokeWidth={1.5} />
-                      <span className={`text-[8.5px] sm:text-[10px] lg:text-[15px] xl:text-[16px] leading-tight lg:leading-relaxed whitespace-pre-line text-left ${isLight ? 'text-gray-600' : 'text-gray-300 lg:text-white'}`}>{event.location}</span>
+
+                  {/* Divider (Hidden on very small screens, visible on lg+) */}
+                  <div className={`hidden lg:block w-[1px] self-stretch my-2 lg:my-4 ${isLight ? 'bg-gray-100' : 'bg-[#D4AF37]/20 lg:bg-white/10'}`}></div>
+
+                  {/* Event Details (Date/Location) */}
+                  <div className="flex flex-col lg:flex-row items-start lg:items-center justify-start gap-3 sm:gap-4 lg:gap-6 xl:gap-10 shrink-0 w-[80px] sm:w-[90px] lg:w-auto xl:pr-6 lg:pl-2 py-0 lg:py-0">
+                    
+                    {/* Date Box */}
+                    <div className={`flex flex-col items-center justify-center w-full lg:w-[120px] xl:w-[130px] h-[75px] sm:h-[75px] lg:h-[140px] xl:h-[150px] rounded-[6px] lg:rounded-[16px] border shrink-0 ${isLight ? 'bg-transparent border-transparent' : 'bg-[#050505] border-[#D4AF37]/20 lg:border-[#D4AF37]/30'}`}>
+                      <span className="text-[22px] sm:text-[24px] lg:text-[46px] xl:text-[52px] font-semibold lg:font-bold text-[#D4AF37] leading-none mb-0.5 lg:mb-2">{event.date}</span>
+                      <span className={`text-[9px] sm:text-[10px] lg:text-[15px] xl:text-[17px] font-medium lg:font-bold uppercase tracking-wider mb-0.5 lg:mb-2 ${isLight ? 'text-[#0B1221]' : 'text-white'}`}>{event.month}</span>
+                      <span className="text-[7px] sm:text-[8px] lg:text-[10px] xl:text-[11px] font-medium lg:font-medium text-gray-400 uppercase tracking-widest">{event.day || "SATURDAY"}</span>
                     </div>
-                    <div className="flex items-start gap-1.5 lg:gap-4">
-                      <Clock className="w-3 h-3 lg:w-5 lg:h-5 text-[#D4AF37] shrink-0" strokeWidth={1.5} />
-                      <span className={`text-[8.5px] sm:text-[10px] lg:text-[15px] xl:text-[16px] text-left ${isLight ? 'text-gray-600' : 'text-gray-300 lg:text-white'}`}>{event.time}</span>
+                    
+                    {/* Location & Time */}
+                    <div className="flex flex-col justify-center gap-2 lg:gap-6 xl:gap-8 w-full lg:min-w-[160px] xl:min-w-[180px]">
+                      <div className="flex items-start gap-1.5 lg:gap-4">
+                        <MapPin className="w-3 h-3 lg:w-5 lg:h-5 text-[#D4AF37] shrink-0 lg:mt-0.5" strokeWidth={1.5} />
+                        <span className={`text-[8.5px] sm:text-[10px] lg:text-[15px] xl:text-[16px] leading-tight lg:leading-relaxed whitespace-pre-line text-left ${isLight ? 'text-gray-600' : 'text-gray-300 lg:text-white'}`}>{event.location}</span>
+                      </div>
+                      <div className="flex items-start gap-1.5 lg:gap-4">
+                        <Clock className="w-3 h-3 lg:w-5 lg:h-5 text-[#D4AF37] shrink-0" strokeWidth={1.5} />
+                        <span className={`text-[8.5px] sm:text-[10px] lg:text-[15px] xl:text-[16px] text-left ${isLight ? 'text-gray-600' : 'text-gray-300 lg:text-white'}`}>{event.time}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

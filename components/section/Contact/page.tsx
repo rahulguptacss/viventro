@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -44,7 +44,13 @@ export default function Contact({ data }: ContactProps) {
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <h3 className="text-[22px] font-bold text-[#080d1e] mb-2" style={{ fontFamily: 'var(--font-geist-sans), "Outfit", "Plus Jakarta Sans", sans-serif' }}>{item.title}</h3>
                 <div className="h-[2px] w-12 bg-[#e4a836] mb-3 rounded-full"></div>
-                <p className="text-[#6b7280] text-[16px]">{item.details}</p>
+                {item.icon === 'PhoneCall' ? (
+                  <a href={`tel:${item.details.replace(/[^0-9+]/g, '')}`} className="text-[#6b7280] text-[16px] hover:text-[#D49A4D] transition-colors">{item.details}</a>
+                ) : item.icon === 'Mail' ? (
+                  <a href={`mailto:${item.details}`} className="text-[#6b7280] text-[16px] hover:text-[#D49A4D] transition-colors">{item.details}</a>
+                ) : (
+                  <p className="text-[#6b7280] text-[16px]">{item.details}</p>
+                )}
               </div>
             </motion.div>
           ))}
@@ -141,7 +147,7 @@ export default function Contact({ data }: ContactProps) {
                 <div>
                   <button 
                     type="button"
-                    className="inline-flex items-center gap-5 bg-[#e4a836] hover:bg-[#c9922e] text-white font-normal pl-8 pr-2 py-2 rounded-full transition-colors group"
+                    className="inline-flex items-center gap-5 bg-[#e4a836] hover:bg-[#c9922e] text-white font-normal pl-8 pr-2 py-2 rounded-full transition-colors group cursor-pointer"
                   >
                     <span className="text-[17px]" style={{ fontFamily: '"Poppins", sans-serif' }}>
                       Send Message

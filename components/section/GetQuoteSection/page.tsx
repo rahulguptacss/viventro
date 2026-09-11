@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { FiUser, FiMail, FiPhone, FiChevronDown, FiCalendar, FiUsers, FiMapPin, FiEdit3, FiArrowRight, FiShield } from "react-icons/fi";
 import { TbClipboardText } from "react-icons/tb";
 import { GetQuotePageData } from "../../types";
@@ -218,7 +219,7 @@ export default function GetQuoteSection({ data }: GetQuoteSectionProps) {
                 <div className="flex items-start gap-2 pt-2">
                   <input type="checkbox" id="terms" className="mt-[3px] accent-[#d87d15]" />
                   <label htmlFor="terms" className="text-[13px] text-[#4b5563] leading-relaxed">
-                    {data.formLabels.termsLabel} <a href="#" className="text-[#d87d15] hover:underline font-semibold">{data.formLabels.termsLink1}</a> {data.formLabels.termsAndText || "and"} <a href="#" className="text-[#d87d15] hover:underline font-semibold">{data.formLabels.termsLink2}</a>.
+                    {data.formLabels.termsLabel} <Link href="/privacy-policy" className="text-[#d87d15] hover:underline font-semibold">{data.formLabels.termsLink1}</Link> {data.formLabels.termsAndText || "and"} <Link href="/terms-and-conditions" className="text-[#d87d15] hover:underline font-semibold">{data.formLabels.termsLink2}</Link>.
                   </label>
                 </div>
 

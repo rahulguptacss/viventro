@@ -113,7 +113,7 @@ export default function Footer({ data }: FooterProps) {
               </p>
 
               {/* Divider */}
-              <div className="my-7 flex items-center gap-3">
+              <div className="my-4 flex items-center gap-3">
                 <div className="h-px flex-1 bg-[#D4AF37]" />
 
                 <div className="h-2 w-2 rotate-45 bg-[#D4AF37]" />
@@ -122,7 +122,7 @@ export default function Footer({ data }: FooterProps) {
               </div>
 
               {/* Follow Us */}
-              <h4 className="mb-5 text-[16px] font-semibold">{data.labels.followUs}</h4>
+              <h4 className="mb-5 text-[13px] font-medium">{data.labels.followUs}</h4>
 
               <div className="flex gap-3">
                 <a
@@ -169,7 +169,7 @@ export default function Footer({ data }: FooterProps) {
                   strokeWidth={1.5}
                 />
 
-                <h4 className="text-[18px] font-bold">{data.labels.ourEvents}</h4>
+                <h4 className="text-[15px] font-semibold">{data.labels.ourEvents}</h4>
               </div>
 
               <div className="mt-4 h-[2px] w-12 bg-[#D4AF37]" />
@@ -182,13 +182,13 @@ export default function Footer({ data }: FooterProps) {
                   >
                     <Link
                       href={link.href}
-                      className="group flex items-center gap-3 py-3.5 text-[14px] text-[#d1d1d1] transition-all hover:text-[#D4AF37]"
+                      className="group flex items-center gap-3 py-3.5 text-[13px] text-[#d1d1d1] transition-all hover:text-[#D4AF37]"
                     >
                       <ArrowRight
                         className="h-[17px] w-[17px] shrink-0 text-[#D4AF37] transition-transform group-hover:translate-x-1"
                       />
 
-                      <span>{link.label}</span>
+                      <span className="whitespace-nowrap">{link.label}</span>
                     </Link>
                   </li>
                 ))}
@@ -208,7 +208,7 @@ export default function Footer({ data }: FooterProps) {
                   strokeWidth={1.5}
                 />
 
-                <h4 className="text-[18px] font-bold">{data.labels.contactUs}</h4>
+                <h4 className="text-[15px] font-semibold">{data.labels.contactUs}</h4>
               </div>
 
               <div className="mt-4 h-[2px] w-12 bg-[#D4AF37]" />
@@ -222,11 +222,11 @@ export default function Footer({ data }: FooterProps) {
                   </div>
 
                   <div>
-                    <h5 className="text-[15px] font-semibold text-white">{data.labels.callUs}</h5>
+                    <h5 className="text-[13px] font-medium text-white">{data.labels.callUs}</h5>
 
-                    <p className="mt-1 text-[13px] text-[#bdbdbd]">
+                    <a href={`tel:${data.contact.phone.replace(/[^0-9+]/g, '')}`} className="mt-1 block text-[13px] text-[#bdbdbd] hover:text-[#D4AF37] transition-colors">
                       {data.contact.phone}
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -237,11 +237,11 @@ export default function Footer({ data }: FooterProps) {
                   </div>
 
                   <div>
-                    <h5 className="text-[15px] font-semibold text-white">{data.labels.mailUs}</h5>
+                    <h5 className="text-[13px] font-medium text-white">{data.labels.mailUs}</h5>
 
-                    <p className="mt-1 text-[13px] text-[#bdbdbd]">
+                    <a href={`mailto:${data.contact.email}`} className="mt-1 block text-[13px] text-[#bdbdbd] hover:text-[#D4AF37] transition-colors">
                       {data.contact.email}
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -252,7 +252,7 @@ export default function Footer({ data }: FooterProps) {
                   </div>
 
                   <div>
-                    <h5 className="text-[15px] font-semibold text-white">{data.labels.officeLocation}</h5>
+                    <h5 className="text-[13px] font-medium text-white">{data.labels.officeLocation}</h5>
 
                     <p className="mt-1 max-w-[200px] text-[13px] leading-[1.7] text-[#bdbdbd]">
                       {data.contact.address}
@@ -276,7 +276,7 @@ export default function Footer({ data }: FooterProps) {
                     strokeWidth={1.5}
                   />
 
-                  <h4 className="text-[18px] font-bold">
+                  <h4 className="text-[15px] font-semibold">
                     {data.newsletter.title}
                   </h4>
                 </div>
@@ -370,7 +370,7 @@ export default function Footer({ data }: FooterProps) {
               </p>
 
               {/* Gold divider */}
-              <div className="my-6 flex items-center gap-3">
+              <div className="my-4 flex items-center gap-3">
                 <div className="h-px flex-1 bg-[#D4AF37]" />
 
                 <div className="h-2 w-2 rotate-45 bg-[#D4AF37]" />
@@ -379,7 +379,7 @@ export default function Footer({ data }: FooterProps) {
               </div>
 
               {/* Follow */}
-              <h4 className="mb-4 text-[16px] font-semibold">{data.labels.followUs}</h4>
+              <h4 className="mb-4 text-[13px] font-medium">{data.labels.followUs}</h4>
 
               <div className="flex gap-3">
                 <a
@@ -429,7 +429,7 @@ export default function Footer({ data }: FooterProps) {
                     strokeWidth={1.5}
                   />
 
-                  <span className="text-[17px] font-semibold">{data.labels.ourEvents}</span>
+                  <span className="text-[15px] font-medium">{data.labels.ourEvents}</span>
                 </span>
 
                 <ChevronDown className={`h-5 w-5 text-[#D4AF37] transition-transform duration-300 ${openSection === "events" ? "rotate-180" : ""}`} />
@@ -450,11 +450,11 @@ export default function Footer({ data }: FooterProps) {
                     <Link
                       href={link.href}
                       key={index}
-                      className="group flex items-center gap-3 border-b border-white/[0.08] py-3 text-[14px] text-[#d0d0d0] last:border-0"
+                      className="group flex items-center gap-3 border-b border-white/[0.08] py-3 text-[13px] text-[#d0d0d0] last:border-0"
                     >
                       <ArrowRight className="h-4 w-4 shrink-0 text-[#D4AF37] transition-transform group-hover:translate-x-1" />
 
-                      <span>{link.label}</span>
+                      <span className="whitespace-nowrap">{link.label}</span>
                     </Link>
                   ))}
 
@@ -482,7 +482,7 @@ export default function Footer({ data }: FooterProps) {
                     strokeWidth={1.5}
                   />
 
-                  <span className="text-[17px] font-semibold">{data.labels.contactUs}</span>
+                  <span className="text-[15px] font-medium">{data.labels.contactUs}</span>
                 </span>
 
                 <ChevronDown className={`h-5 w-5 text-[#D4AF37] transition-transform duration-300 ${openSection === "contact" ? "rotate-180" : ""}`} />
@@ -507,11 +507,11 @@ export default function Footer({ data }: FooterProps) {
                     </div>
 
                     <div>
-                      <h5 className="text-[14px] font-semibold">{data.labels.callUs}</h5>
+                      <h5 className="text-[13px] font-medium">{data.labels.callUs}</h5>
 
-                      <p className="mt-0.5 text-[13px] text-[#aaa]">
+                      <a href={`tel:${data.contact.phone.replace(/[^0-9+]/g, '')}`} className="mt-0.5 block text-[13px] text-[#aaa] hover:text-[#D4AF37] transition-colors">
                         {data.contact.phone}
-                      </p>
+                      </a>
                     </div>
                   </div>
 
@@ -523,11 +523,11 @@ export default function Footer({ data }: FooterProps) {
                     </div>
 
                     <div>
-                      <h5 className="text-[14px] font-semibold">{data.labels.mailUs}</h5>
+                      <h5 className="text-[13px] font-medium">{data.labels.mailUs}</h5>
 
-                      <p className="mt-0.5 break-all text-[13px] text-[#aaa]">
+                      <a href={`mailto:${data.contact.email}`} className="mt-0.5 block break-all text-[13px] text-[#aaa] hover:text-[#D4AF37] transition-colors">
                         {data.contact.email}
-                      </p>
+                      </a>
                     </div>
                   </div>
 
@@ -539,7 +539,7 @@ export default function Footer({ data }: FooterProps) {
                     </div>
 
                     <div>
-                      <h5 className="text-[14px] font-semibold">{data.labels.officeLocation}</h5>
+                      <h5 className="text-[13px] font-medium">{data.labels.officeLocation}</h5>
 
                       <p className="mt-0.5 text-[13px] leading-[1.6] text-[#aaa]">
                         {data.contact.address}
@@ -571,7 +571,7 @@ export default function Footer({ data }: FooterProps) {
                     strokeWidth={1.5}
                   />
 
-                  <span className="text-[17px] font-semibold">
+                  <span className="text-[15px] font-medium">
                     {data.newsletter.title}
                   </span>
                 </span>

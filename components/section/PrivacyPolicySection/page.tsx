@@ -278,9 +278,9 @@ export default function PrivacyPolicySection({ data }: PrivacyPolicySectionProps
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-60px" }}
-              className="w-full lg:w-[35%]"
+              className="w-full lg:w-[35%] sticky top-28 self-start"
             >
-              <div className="sticky top-28 bg-[#fdf7ef] border border-[#f5dbbc] rounded-[20px] p-7 sm:p-8 text-center relative overflow-hidden min-h-[500px] flex flex-col">
+              <div className="bg-[#fdf7ef] border border-[#f5dbbc] rounded-[20px] p-7 sm:p-8 text-center relative overflow-hidden min-h-[500px] flex flex-col">
 
                 {/* Animated diamond top */}
                 <motion.div

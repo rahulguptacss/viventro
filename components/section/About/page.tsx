@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Users, Check, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AboutData } from "../../types";
 
 interface AboutProps {
@@ -11,6 +12,9 @@ interface AboutProps {
 }
 
 export default function About({ data }: AboutProps) {
+  const pathname = usePathname();
+  const isAboutPage = pathname === '/about-us';
+
   return (
     <section className="relative overflow-hidden bg-white py-16 text-[#0a1128] font-sans sm:py-20 lg:py-8">
       <div className="mx-auto w-full max-w-[1300px] px-5 sm:px-7 lg:px-5">
@@ -69,21 +73,23 @@ export default function About({ data }: AboutProps) {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.12, duration: 0.55 }}
-                className="mt-1 flex w-[294px] shrink-0 flex-col items-end"
+                className="mt-1 flex w-[380px] shrink-0 flex-col items-end"
               >
                 <p className="text-right text-[16px] font-medium leading-[1.9] text-[#6b7280]">
                   {data.description}
                 </p>
 
-                <Link
-                  href={data.buttonLink || "#"}
-                  className="group mt-4 inline-flex items-center gap-3 rounded-full bg-[#D49A4D] py-1.5 pl-5 pr-1.5 text-[16px] font-semibold text-white shadow-[0_7px_18px_rgba(212,154,77,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bd853e]"
-                >
-                  <span>{data.buttonText}</span>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#D49A4D] shadow-sm transition-transform duration-300 group-hover:rotate-6">
-                    <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
-                  </span>
-                </Link>
+                {!isAboutPage && (
+                  <Link
+                    href={data.buttonLink || "#"}
+                    className="group mt-4 inline-flex items-center gap-3 rounded-full bg-[#D49A4D] py-1.5 pl-5 pr-1.5 text-[16px] font-semibold text-white shadow-[0_7px_18px_rgba(212,154,77,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bd853e]"
+                  >
+                    <span>{data.buttonText}</span>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#D49A4D] shadow-sm transition-transform duration-300 group-hover:rotate-6">
+                      <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
+                    </span>
+                  </Link>
+                )}
               </motion.div>
             </div>
 
@@ -93,7 +99,7 @@ export default function About({ data }: AboutProps) {
               whileInView={{ opacity: 1, scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.18, duration: 0.5 }}
-              className="-mt-2 flex origin-left items-center gap-3"
+              className="mt-3 flex origin-left items-center gap-3"
             >
               <span className="h-[1.5px] w-[92px] bg-[#B88E52]" />
               <svg width="11" height="11" viewBox="0 0 24 24" fill="#B88E52">
@@ -249,15 +255,17 @@ export default function About({ data }: AboutProps) {
               {data.description}
             </p>
 
-            <Link
-              href="#"
-              className="group mt-4 inline-flex w-fit items-center gap-3 rounded-full bg-[#D49A4D] py-1.5 pl-5 pr-1.5 text-[13px] font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bd853e]"
-            >
-              <span>{data.buttonText}</span>
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#D49A4D] shadow-sm transition-transform duration-300 group-hover:rotate-6">
-                <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
-              </span>
-            </Link>
+            {!isAboutPage && (
+              <Link
+                href="#"
+                className="group mt-4 inline-flex w-fit items-center gap-3 rounded-full bg-[#D49A4D] py-1.5 pl-5 pr-1.5 text-[13px] font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bd853e]"
+              >
+                <span>{data.buttonText}</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#D49A4D] shadow-sm transition-transform duration-300 group-hover:rotate-6">
+                  <ArrowUpRight className="h-4 w-4" strokeWidth={3} />
+                </span>
+              </Link>
+            )}
           </motion.div>
 
           <motion.div

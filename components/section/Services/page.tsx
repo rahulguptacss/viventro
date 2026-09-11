@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Heart, Briefcase, Music, Cake, Plane, HeartHandshake,
   ArrowUpRight, PartyPopper
@@ -39,6 +40,8 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function Services({ data, theme = 'dark' }: ServicesProps) {
   const isLight = theme === 'light';
+  const pathname = usePathname();
+  const isServicesPage = pathname === '/services';
   
   return (
     <section className={`py-12 lg:py-16 overflow-hidden ${isLight ? 'bg-white text-[#0B1221]' : 'bg-[#0a0b0e] text-white'}`}>
@@ -91,15 +94,17 @@ export default function Services({ data, theme = 'dark' }: ServicesProps) {
             <p className={`max-w-full sm:max-w-[340px] leading-[1.7] text-[15px] ${isLight ? 'text-gray-600' : 'text-gray-300'}`}>
               {data.description}
             </p>
-            <Link
-              href={data.buttonLink || "#"}
-              className="group shrink-0 inline-flex items-center gap-4 bg-[#D49A4D] hover:bg-[#bd853e] py-2 pl-8 pr-2.5 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black text-[16px] shadow-[0_0_25px_rgba(212,154,77,0.25)]"
-            >
-              <span>{data.buttonText}</span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#D49A4D] shadow-sm transition-transform duration-300 group-hover:rotate-6">
-                <ArrowUpRight className="h-5 w-5" strokeWidth={2.5} />
-              </span>
-            </Link>
+            {!isServicesPage && (
+              <Link
+                href={data.buttonLink || "#"}
+                className="group shrink-0 inline-flex items-center gap-4 bg-[#D49A4D] hover:bg-[#bd853e] py-2 pl-8 pr-2.5 rounded-full font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black text-[16px] shadow-[0_0_25px_rgba(212,154,77,0.25)]"
+              >
+                <span>{data.buttonText}</span>
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#D49A4D] shadow-sm transition-transform duration-300 group-hover:rotate-6">
+                  <ArrowUpRight className="h-5 w-5" strokeWidth={2.5} />
+                </span>
+              </Link>
+            )}
           </motion.div>
         </div>
 

@@ -137,24 +137,24 @@
       "description": "Your trusted partner for creating unforgettable events, from corporate conferences to luxury weddings.",
       "quickLinks": [
         {
-          "label": "Live Shows & Concerts",
-          "href": "#"
-        },
-        {
           "label": "Weddings & Engagements",
-          "href": "#"
+          "href": "/services/1"
         },
         {
-          "label": "Nights & Award Ceremonies",
-          "href": "#"
+          "label": "Birthday & Private Parties",
+          "href": "/services/2"
         },
         {
-          "label": "Birthday Parties",
-          "href": "#"
+          "label": "Corporate Events & Conferences",
+          "href": "/services/3"
         },
         {
-          "label": "Corporate Events",
-          "href": "#"
+          "label": "Engagements & Anniversaries",
+          "href": "/services/4"
+        },
+        {
+          "label": "Destination Weddings",
+          "href": "/services/5"
         }
       ],
       "contact": {
@@ -188,7 +188,7 @@
       ],
       "labels": {
         "followUs": "Follow Us",
-        "ourEvents": "Our Events",
+        "ourEvents": "Our Services",
         "contactUs": "Contact Us",
         "callUs": "Call Us",
         "mailUs": "Mail Us",
