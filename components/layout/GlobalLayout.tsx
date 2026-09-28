@@ -5,6 +5,7 @@ import Header from "../section/Header/page";
 import Footer from "../section/Footer/page";
 import PageBanner from "../section/PageBanner/page";
 import { HeaderData, PageBannerData } from "../types";
+import BackToTop from "./BackToTop";
 
 interface GlobalLayoutProps {
   children: React.ReactNode;
@@ -100,6 +101,7 @@ export default function GlobalLayout({ children, headerData, footerData, banners
       {children}
       
       <Footer data={footerData} />
+      <BackToTop />
     </div>
   );
 }
